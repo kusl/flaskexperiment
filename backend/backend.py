@@ -1,6 +1,8 @@
+import string
 import uuid
 from datetime import datetime
 
+import random
 from flask import Flask
 
 import secret
@@ -18,19 +20,36 @@ def hello_world():
     return 'Hello World!'
 
 
+def return_random_string(length):
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(length))
+
+
 def create_message():
     my_message = MyMessage(
         message_id=uuid.uuid4(),
-        sender="spamkushal@gmail.com",
+        sender=f"{return_random_string(8)}@{return_random_string(5)}.{return_random_string(3)}",
         sent=datetime.utcnow(),
-        receiver="kushalpublic@gmail.com",
+        receiver=f"{return_random_string(8)}@{return_random_string(5)}.{return_random_string(3)}",
         received=datetime.utcnow(),
-        subject="Three weird tricks to make money, number five will shock you!",
-        body=f"This speaker has a feature that sets it apart from the crowd. "
-             f"It’s got a rechargeable battery you can use as a power bank, "
-             f"which is cool, but that’s not exactly the feature we’re talking about. "
-             f"It’s this: When you hit the eject button for the battery, "
-             f"it comes out smoothly and extremely satisfyingly.")
+        subject=f"{return_random_string(5)} {return_random_string(8)} {return_random_string(3)}",
+        body=f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
+             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. ")
     shared.db.session.add(my_message)
     shared.db.session.commit()
 

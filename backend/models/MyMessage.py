@@ -11,7 +11,15 @@ class MyMessage(db.Model):
     body = db.Column(db.UnicodeText, nullable=False)
     score = db.Column(db.Float, nullable=False, default=0.0)
 
-    def __init__(self, message_id, subject, sender, sent, receiver, received, body):
+    def __init__(
+            self,
+            message_id,
+            subject,
+            sender,
+            sent,
+            receiver,
+            received,
+            body):
         self.id = message_id
         self.subject = subject
         self.sender = sender
