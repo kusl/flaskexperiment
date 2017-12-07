@@ -19,7 +19,6 @@ def hello_world():
 
 
 def create_message():
-    print(uuid.uuid4())
     my_message = MyMessage(
         message_id=uuid.uuid4(),
         sender="spamkushal@gmail.com",
