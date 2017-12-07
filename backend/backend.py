@@ -20,7 +20,7 @@ def hello_world():
     return 'Hello World!'
 
 
-def return_random_string(length):
+def get_random_string(length):
     letters = string.ascii_lowercase
     return ''.join(random.choice(letters) for i in range(length))
 
@@ -28,28 +28,28 @@ def return_random_string(length):
 def create_message():
     my_message = MyMessage(
         message_id=uuid.uuid4(),
-        sender=f"{return_random_string(8)}@{return_random_string(5)}.{return_random_string(3)}",
+        sender=f"{get_random_string(8)}@{get_random_string(5)}.{get_random_string(3)}",
         sent=datetime.utcnow(),
-        receiver=f"{return_random_string(8)}@{return_random_string(5)}.{return_random_string(3)}",
+        receiver=f"{get_random_string(8)}@{get_random_string(5)}.{get_random_string(3)}",
         received=datetime.utcnow(),
-        subject=f"{return_random_string(5)} {return_random_string(8)} {return_random_string(3)}",
-        body=f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. "
-             f"{return_random_string(5)} {return_random_string(8)} {return_random_string(6)} {return_random_string(3)}. ")
+        subject=f"{get_random_string(5)} {get_random_string(8)} {get_random_string(3)}",
+        body=f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. ")
     shared.db.session.add(my_message)
     shared.db.session.commit()
 
