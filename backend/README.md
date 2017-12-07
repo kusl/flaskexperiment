@@ -1,0 +1,1 @@
+Can we make an effective spam filter using just term frequency and inverse document frequency?
