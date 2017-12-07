@@ -9,9 +9,10 @@ class MyMessage(db.Model):
     receiver = db.Column(db.String(255), nullable=False)
     received = db.Column(db.DateTime, nullable=False)
     body = db.Column(db.UnicodeText, nullable=False)
+    score = db.Column(db.Float, nullable=False, default=0.0)
 
-    def __init__(self, id, subject, sender, sent, receiver, received, body):
-        self.id = id
+    def __init__(self, message_id, subject, sender, sent, receiver, received, body):
+        self.id = message_id
         self.subject = subject
         self.sender = sender
         self.sent = sent

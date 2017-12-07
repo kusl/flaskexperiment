@@ -21,7 +21,7 @@ def hello_world():
 def create_message():
     print(uuid.uuid4())
     my_message = MyMessage(
-        id=uuid.uuid4(),
+        message_id=uuid.uuid4(),
         sender="spamkushal@gmail.com",
         sent=datetime.utcnow(),
         receiver="kushalpublic@gmail.com",
