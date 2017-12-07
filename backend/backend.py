@@ -26,8 +26,8 @@ def create_message():
         receiver="kushalpublic@gmail.com",
         received=datetime.utcnow(),
         subject="Three weird tricks to make money, number five will shock you!",
-        body=f"This Bluetooth speaker has a feature that sets it apart from the crowd. "
-             f"It’s got an ejectable, rechargeable battery you can use as a powerbank, "
+        body=f"This speaker has a feature that sets it apart from the crowd. "
+             f"It’s got a rechargeable battery you can use as a power bank, "
              f"which is cool, but that’s not exactly the feature we’re talking about. "
              f"It’s this: When you hit the eject button for the battery, "
              f"it comes out smoothly and extremely satisfyingly.")
