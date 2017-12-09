@@ -1,8 +1,11 @@
-version: '3'
+version: '2'
 services:
   backend_app:
     build: .
     container_name: backend
+    networks:
+      development:
+        ipv4_address: 172.28.5.2
     ports:
       - "5000:5000"
     volumes:
@@ -16,5 +19,14 @@ services:
     environment:
       - POSTGRES_USER=dbadmin
       - POSTGRES_PASSWORD=dbadmin
+    networks:
+      development:
+        ipv4_address: 172.28.5.3
     ports:
       - "5432:5432"
+networks:
+  development:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+          ip_range: 172.28.5.0/24
