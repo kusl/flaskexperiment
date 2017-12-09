@@ -1,0 +1,20 @@
+version: '3'
+services:
+  backend_app:
+    build: .
+    container_name: backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/var/www/engine:rw
+    depends_on:
+      - backend_db
+    links:
+      - backend_db
+  backend_db:
+    image: postgres:10.1
+    environment:
+      - POSTGRES_USER=dbadmin
+      - POSTGRES_PASSWORD=dbadmin
+    ports:
+      - "5432:5432"
