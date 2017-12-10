@@ -10,7 +10,8 @@ ADD . /var/www/backend
 RUN pip install -r requirements.txt
 RUN python -m unittest discover --verbose
 RUN python -m textblob.download_corpora
+RUN python TfIdf.py
 
 EXPOSE 5000
 
-CMD ["python","TfIdf.py"]
+CMD ["python","backend.py"]
