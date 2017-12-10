@@ -1,3 +1,5 @@
+from flask import jsonify
+
 from shared import db
 
 
@@ -31,9 +33,9 @@ class MyMessage(db.Model):
     def __repr__(self):
         return '<MyMessage %r>' % self.id
 
-    @staticmethod
-    def get_latest_message():
-        return MyMessage.query
+    @property
+    def get_latest_message(self):
+        return jsonify(MyMessage.query)
 
     @property
     def serialize(self):
