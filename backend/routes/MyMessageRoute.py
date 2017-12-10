@@ -14,7 +14,10 @@ MyMessageRoute = Blueprint('my_message_route', __name__)
 
 @MyMessageRoute.route('/api/v0/my_message/first')
 def get_first_message():
-    return jsonify(MyMessage.query.first().serialize)
+    result = MyMessage.query.first().serialize
+    if result is None:
+        return "There is no message"
+    return jsonify(result)
 
 
 @MyMessageRoute.route('/api/v0/my_message/add')
