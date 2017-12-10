@@ -8,7 +8,7 @@ ADD . /var/www/backend
 
 # Install dependencies from requirments.txt
 RUN pip install -r requirements.txt
-RUN python -m unittest -v
+RUN python -m unittest discover --verbose --pattern "Test*.py"
 
 EXPOSE 5000
 
