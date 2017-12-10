@@ -7,15 +7,14 @@ from my_message.MyMessage import MyMessage
 
 class MyMessageTestCase(unittest.TestCase):
 
-    @staticmethod
-    def test_constructor():
+    def test_constructor(self):
         message = MyMessage(message_id=uuid.uuid4(), subject="hello, world", sender="hikingfan@gmail.com",
                             sent=datetime.utcnow(), receiver="kushaldeveloper@gmail.com", received=datetime.utcnow(),
                             body="this is an email")
-        assert message.body == "this is an email"
-        assert message.subject == "hello, world"
-        assert message.sender == "hikingfan@gmail.com"
-        assert message.receiver == "kushaldeveloper@gmail.com"
+        self.assertEqual(message.body, "this is an email")
+        self.assertEqual(message.subject, "hello, world")
+        self.assertEqual(message.sender, "hikingfan@gmail.com")
+        self.assertEqual(message.receiver, "kushaldeveloper@gmail.com")
 
 
 if __name__ == '__main__':
