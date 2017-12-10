@@ -12,7 +12,7 @@ shared.db.init_app(app)
 app.register_blueprint(MyMessageRoute)
 
 
-@MyMessageRoute.route('/', methods=['GET'])
+@app.route('/', methods=['GET'])
 def drop_and_create():
     shared.db.drop_all()
     shared.db.create_all()
