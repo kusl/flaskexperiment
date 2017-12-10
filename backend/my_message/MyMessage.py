@@ -35,6 +35,7 @@ class MyMessage(db.Model):
 
     @property
     def get_latest_message(self):
+        dump(MyMessage.query)
         return jsonify(MyMessage.query)
 
     @property
