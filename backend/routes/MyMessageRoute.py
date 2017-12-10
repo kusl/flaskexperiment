@@ -1,4 +1,3 @@
-import json
 import string
 import uuid
 from datetime import datetime
@@ -16,11 +15,6 @@ MyMessageRoute = Blueprint('my_message_route', __name__)
 @MyMessageRoute.route('/api/v0/my_message/first')
 def get_first_message():
     return jsonify(MyMessage.query.first().serialize)
-
-
-@MyMessageRoute.route('/api/v0/my_message/all')
-def get_all_messages():
-    return json.dumps(MyMessage.query.all().serialize)
 
 
 @MyMessageRoute.route('/api/v0/my_message/add')
