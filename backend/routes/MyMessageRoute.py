@@ -13,7 +13,7 @@ MyMessageRoute = Blueprint('my_message_route', __name__)
 
 @MyMessageRoute.route('/api/v0/my_message/last')
 def get_latest_message():
-    return MyMessage.query.filter_by(receiver=f"hello@world").first()
+    return MyMessage.query
 
 
 @MyMessageRoute.route('/api/v0/my_message/add')

@@ -1,15 +1,15 @@
-from shared import db
+import shared
 
 
-class MyMessage(db.Model):
-    id = db.Column(db.String(40), primary_key=True)
-    subject = db.Column(db.UnicodeText, nullable=False)
-    sender = db.Column(db.String(255), nullable=False)
-    sent = db.Column(db.DateTime, nullable=False)
-    receiver = db.Column(db.String(255), nullable=False)
-    received = db.Column(db.DateTime, nullable=False)
-    body = db.Column(db.UnicodeText, nullable=False)
-    score = db.Column(db.Float, nullable=False, default=0.0)
+class MyMessage(shared.db.Model):
+    id = shared.db.Column(shared.db.String(40), primary_key=True)
+    subject = shared.db.Column(shared.db.UnicodeText, nullable=False)
+    sender = shared.db.Column(shared.db.String(255), nullable=False)
+    sent = shared.db.Column(shared.db.DateTime, nullable=False)
+    receiver = shared.db.Column(shared.db.String(255), nullable=False)
+    received = shared.db.Column(shared.db.DateTime, nullable=False)
+    body = shared.db.Column(shared.db.UnicodeText, nullable=False)
+    score = shared.db.Column(shared.db.Float, nullable=False, default=0.0)
 
     def __init__(
             self,
