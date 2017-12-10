@@ -1,8 +1,11 @@
 import unittest
 
+import nltk
 from textblob import TextBlob as tb
 
 from my_message.TfIdf import tf_idf
+
+nltk.download('punkt')
 
 
 class TfIdfTestCase(unittest.TestCase):
