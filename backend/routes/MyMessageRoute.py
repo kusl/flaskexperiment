@@ -3,7 +3,7 @@ import uuid
 from datetime import datetime
 
 import random
-from flask import Blueprint
+from flask import Blueprint, jsonify
 
 import shared
 from my_message.MyMessage import MyMessage
@@ -13,7 +13,7 @@ MyMessageRoute = Blueprint('my_message_route', __name__)
 
 @MyMessageRoute.route('/api/v0/my_message/last')
 def get_latest_message():
-    return MyMessage.get_latest_message
+    return jsonify(MyMessage.query)
 
 
 @MyMessageRoute.route('/api/v0/my_message/add')
