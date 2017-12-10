@@ -13,7 +13,7 @@ MyMessageRoute = Blueprint('my_message_route', __name__)
 
 @MyMessageRoute.route('/api/v0/my_message/last')
 def get_latest_message():
-    return MyMessage.query
+    return MyMessage.query.filter_by(receiver=f"hello@world").first()
 
 
 @MyMessageRoute.route('/api/v0/my_message/add')
@@ -32,7 +32,7 @@ def create_message():
         message_id=uuid.uuid4(),
         sender=f"{get_random_string(8)}@{get_random_string(5)}.{get_random_string(3)}",
         sent=datetime.utcnow(),
-        receiver=f"{get_random_string(8)}@{get_random_string(5)}.{get_random_string(3)}",
+        receiver=f"hello@world",
         received=datetime.utcnow(),
         subject=f"{get_random_string(5)} {get_random_string(8)} {get_random_string(3)}",
         body=f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
