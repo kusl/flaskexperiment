@@ -11,4 +11,5 @@ RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
+CMD["python -m unittest discover", ""]
 CMD ["python","backend.py"]
