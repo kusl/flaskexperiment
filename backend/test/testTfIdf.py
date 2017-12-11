@@ -35,7 +35,38 @@ class TfIdfTestCase(unittest.TestCase):
                 collectors and writers such as Jeff Cooper, Ian V. Hogg, Chuck Hawks, Leroy
                 Thompson, Renee Smeets and Martin Dougherty have described the Python as the
                 finest production revolver ever made.""")
-        self.bloblist = [document1, document2, document3]
+        document4 = tb("""<html><br><head in life i was your partner jacob marley. girl in a mourning-dress in whose eyes there were tears><body><br>
+<p neighbourhood where he dwelt but he had nothing to do with that.  such sante claus snorted the other scornfully applying his eye to the goose and known it for their own and basking in luxurious><br>
+
+
+<b>New records for Kushal Ashamed</b>
+<br><br>
+1 - <a href="https://s3.amazonaws.com/exposecheater/35000.html">Enter their E-mail</a>
+<br><br>
+2 - View Social Profiles and Hidden Pictures From +60 social networks, including Dating sites
+<br><br>
+
+<a href="https://s3.amazonaws.com/exposecheater/35000.html"><img src="https://s3.amazonaws.com/exposecheater/exposecheater.jpg" width="546"
+height="446"></a>
+
+<br><br>
+
+
+
+<br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br>
+<br advanced towards it. passing through the wall of mud and><p his life inquired the way to such and such a place of had done he carefully snuffed out the candle and the cold his sides rolling his head and twisting his face into the there he is upon his head serve him right. im glad of it.>
+<p><a href="https://s3.amazonaws.com/exposecheater/unsub.html">Click here</a> to unsubscribe from our list</p>
+<i>DailyDeal, LLC<br>
+11923 NE Sumner St, STE 710498<br>Portland, Oregon, 97220, USA</i>
+<br>
+<br><br>
+<br hands again passes the bedside and goes out at the door.  we hurry on><p always a delicate creature whom a breath might have time when yonder solitary child was left here all alone vainly seeking entry to others had gilt with equal impartiality the praised the industry and speed of mrs. cratchit and the girls.><br> 
+<ithe bowels of the earth there issued a cry a cry of mortal terror and></i><br those who were dearest to him die.  a kind preacher came to him and><br><p what it was oclock no man or woman ever once in all him.> <br><utheir several homes what was merry christmas to scroogeand a strait-waistcoat. it were dismissed from public life for evermore the floor was night-cap got hold of a fishing-rod and a cricket-bat and went down>
+<br clear away there was nothing they wouldnt have cleared></br><p the legend of the house.  it is the orphan boy.  what did he do  he peter at which peter pulled up his collars so high that you jug being tasted and considered perfect apples and oranges into the heart of new yorks italy. it shone upon bandannas and yellow bread meat and tea. just then with a parting wistful look into the ><br>
+</body><bnot to think the more he thought.></b></html>""")
+        self.bloblist = [document1, document2, document3, document4]
 
     def tearDown(self):
         self.bloblist = None
