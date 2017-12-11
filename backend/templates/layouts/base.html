@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Text me at +1 716 501 5874!</title>
+    <meta name="description" content="A website for me">
+    <meta name="viewport" content="width=device-width">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-
+<article>
+    <h1>
+        {% block articletitle %}{% endblock %}
+    </h1>
+    <p>
+        {% block articlelead %}{% endblock %}
+    </p>
+</article>
+<aside>
+    {% block aside %}{% endblock %}
+</aside>
 </body>
 </html>
