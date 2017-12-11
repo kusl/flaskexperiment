@@ -7,7 +7,7 @@ services:
       development:
         ipv4_address: 172.21.5.2
     ports:
-      - "5000:5000"
+      - "80:80"
     volumes:
       - .:/var/www/engine:rw
     depends_on:

@@ -10,6 +10,6 @@ ADD . /var/www/backend
 RUN pip install -r requirements.txt
 RUN python -m unittest discover --verbose
 
-EXPOSE 5000
+EXPOSE 80
 
 CMD ["python","backend.py"]
