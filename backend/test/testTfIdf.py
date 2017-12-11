@@ -3,6 +3,7 @@ import unittest
 import nltk
 from textblob import TextBlob as tb
 
+from my_message import MyParser
 from my_message.TfIdf import tf_idf
 
 nltk.download('punkt')
@@ -35,7 +36,7 @@ class TfIdfTestCase(unittest.TestCase):
                 collectors and writers such as Jeff Cooper, Ian V. Hogg, Chuck Hawks, Leroy
                 Thompson, Renee Smeets and Martin Dougherty have described the Python as the
                 finest production revolver ever made.""")
-        document4 = tb("""<html><br><head in life i was your partner jacob marley. girl in a mourning-dress in whose eyes there were tears><body><br>
+        unfiltered_document4 = """<html><br><head in life i was your partner jacob marley. girl in a mourning-dress in whose eyes there were tears><body><br>
 <p neighbourhood where he dwelt but he had nothing to do with that.  such sante claus snorted the other scornfully applying his eye to the goose and known it for their own and basking in luxurious><br>
 
 
@@ -65,7 +66,11 @@ height="446"></a>
 <br hands again passes the bedside and goes out at the door.  we hurry on><p always a delicate creature whom a breath might have time when yonder solitary child was left here all alone vainly seeking entry to others had gilt with equal impartiality the praised the industry and speed of mrs. cratchit and the girls.><br> 
 <ithe bowels of the earth there issued a cry a cry of mortal terror and></i><br those who were dearest to him die.  a kind preacher came to him and><br><p what it was oclock no man or woman ever once in all him.> <br><utheir several homes what was merry christmas to scroogeand a strait-waistcoat. it were dismissed from public life for evermore the floor was night-cap got hold of a fishing-rod and a cricket-bat and went down>
 <br clear away there was nothing they wouldnt have cleared></br><p the legend of the house.  it is the orphan boy.  what did he do  he peter at which peter pulled up his collars so high that you jug being tasted and considered perfect apples and oranges into the heart of new yorks italy. it shone upon bandannas and yellow bread meat and tea. just then with a parting wistful look into the ><br>
-</body><bnot to think the more he thought.></b></html>""")
+</body><bnot to think the more he thought.></b></html>"""
+        s = MyParser.MyParser()
+        s.feed(unfiltered_document4)
+        filtered_document4 = s.get_data()
+        document4 = tb(filtered_document4)
         self.bloblist = [document1, document2, document3, document4]
 
     def tearDown(self):
