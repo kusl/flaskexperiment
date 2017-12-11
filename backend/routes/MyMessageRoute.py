@@ -25,7 +25,7 @@ def hello_world():
     result = create_message()
     shared.db.session.add(result)
     shared.db.session.commit()
-    return "done"
+    return render_template("pages/add.html")
 
 
 def get_random_string(length):
