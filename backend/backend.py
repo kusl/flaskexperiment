@@ -1,6 +1,4 @@
-from datetime import datetime
-
-from flask import Flask
+from flask import Flask, render_template
 
 import secret
 import shared
@@ -16,7 +14,7 @@ app.register_blueprint(MyMessageRoute)
 def drop_and_create():
     shared.db.drop_all()
     shared.db.create_all()
-    return 'Create All ' + str(datetime.utcnow())
+    return render_template('pages/index.html')
 
 
 if __name__ == '__main__':
