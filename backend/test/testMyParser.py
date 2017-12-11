@@ -13,7 +13,7 @@ class TfIdfTestCase(unittest.TestCase):
         self.document = None
 
     def test_score_under_one(self):
-        s = MyParser()
+        s = MyParser.MyParser()
         s.feed(self.document)
         result = s.get_data()
         print(result)
