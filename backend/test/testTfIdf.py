@@ -251,10 +251,7 @@ vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
         print(filtered_document8)
         document8 = tb(filtered_document8)
 
-        self.bloblist = [
-            document1,
-            document2,
-            document3,
+        self.blob_list = [
             document4,
             document5,
             document6,
@@ -262,12 +259,12 @@ vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
             document8]
 
     def tearDown(self):
-        self.bloblist = None
+        self.blob_list = None
 
     def test_score_under_one(self):
-        for i, blob in enumerate(self.bloblist):
+        for i, blob in enumerate(self.blob_list):
             print("Top words in document {}".format(i + 1))
-            scores = {word: tf_idf(word, blob, self.bloblist)
+            scores = {word: tf_idf(word, blob, self.blob_list)
                       for word in blob.words}
             sorted_words = sorted(
                 scores.items(),
@@ -279,9 +276,9 @@ vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
                     score, 1.0, "score should be less than one")
 
     def test_score_over_zero(self):
-        for i, blob in enumerate(self.bloblist):
+        for i, blob in enumerate(self.blob_list):
             print("Top words in document {}".format(i + 1))
-            scores = {word: tf_idf(word, blob, self.bloblist)
+            scores = {word: tf_idf(word, blob, self.blob_list)
                       for word in blob.words}
             sorted_words = sorted(
                 scores.items(),
