@@ -70,6 +70,7 @@ height="446"></a>
         s = MyParser.MyParser()
         s.feed(unfiltered_document4)
         filtered_document4 = s.get_data()
+        print(filtered_document4)
         document4 = tb(filtered_document4)
         self.bloblist = [document1, document2, document3, document4]
 
