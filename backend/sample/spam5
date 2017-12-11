@@ -1,0 +1,87 @@
+Delivered-To: spa.mkushal@gmail.com
+Received: by 10.80.144.227 with SMTP id d32csp1958161eda;
+        Sun, 10 Dec 2017 12:04:15 -0800 (PST)
+X-Google-Smtp-Source: AGs4zMa3WvKxuXfaugdbZvRBp9hLklBMta1mTEVcCcq3fPqm3pXL0OYnxj+yYmy0PHnwrexX9Ykp
+X-Received: by 10.159.244.14 with SMTP id x14mr12706504plr.412.1512936254942;
+        Sun, 10 Dec 2017 12:04:14 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1512936254; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Wes6HlnQhxPU5KqqunsUWIud+rr7GRGlAGJbpcUeihJpGQPFPY3HlN6DzJ6fuJXIRP
+         tVPx5HWXGb+rKEONm3Kxjl5sO98f3pP47baLVGdQmkQPXNJBmClo+BpnOwFo+UnIIk6o
+         a1ceDD+uIVf5/w5h8iTtAaIvrbGorG0rDuKa2RM5Ogj9uzaJdqGxfbUK1+Ac7XqAImpP
+         JgWIru2tneWfg3tjxsHq9JUFVygHYHjBt9cCLH7WAJZyEqmp/fEDZXdw3lPiNZXMm6Ya
+         6DmrlywjMn+PKF6NYwWp1cQn+lfoqikOgVYkb9VSeC/Pg31YnU9BXtk/pBTT3J4mcC11
+         gDxA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:subject:from:to:date:message-id
+         :arc-authentication-results;
+        bh=30wj5P6UG/+IbP+WjUm7pa0Q+LSo3COM+j3oiK60bW0=;
+        b=tL/usOcOuG9IWO5pxfXRnFnaZ3HaiKGte8dcag1jfrPmAJen0QSiwv000g4pK35jVz
+         UkTzf0MJzG5t4FL6N6G9Ev9/Ads9wQP14ATnViUIUYdMhCuKDYaPsxlIqhS9NImTgZjV
+         jpXg8jFDGBeCi4g0UCvgIk6cvAA6rMKW4pq8s4SJ6CadrdfIf2beods+rHjqL5l5CAZL
+         wK67eYYNHvsqwwloJVYmr63AFB6qhJESq8jOAAF5su/rMSMHWVnrbsmzDXEkfJpxwU+Q
+         uBdGUoM6U6be1oIik6oYaNg39k/fzqWxRv67pnJCPfE2mytu7dkxjafQ+mLXa8NOIRcg
+         ZjDg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=neutral (google.com: 42.171.53.36 is neither permitted nor denied by best guess record for domain of findmoneyunclaimed@mularsen.com) smtp.mailfrom=findmoneyunclaimed@mularsen.com
+Return-Path: <findmoneyunclaimed@mularsen.com>
+Received: from sexist.mularsen.com ([42.171.53.36])
+        by mx.google.com with ESMTP id z77si9910181pff.100.2017.12.10.12.04.14
+        for <spa.mkushal@gmail.com>;
+        Sun, 10 Dec 2017 12:04:14 -0800 (PST)
+Received-SPF: neutral (google.com: 42.171.53.36 is neither permitted nor denied by best guess record for domain of findmoneyunclaimed@mularsen.com) client-ip=42.171.53.36;
+Authentication-Results: mx.google.com;
+       spf=neutral (google.com: 42.171.53.36 is neither permitted nor denied by best guess record for domain of findmoneyunclaimed@mularsen.com) smtp.mailfrom=findmoneyunclaimed@mularsen.com
+Message-ID: <qhil1988a3b92d56173a016c83557_3d932d5a_A28105CS@xwgjavmy.sexist.mularsen.com>
+Date: Sun, 10 Dec 2017 14:04:13 -0600
+To: <spa.mkushal@gmail.com>
+From: YouHaveMoney <findmoneyunclaimed@mularsen.com>
+X-Mailer: PHPKeturah.5293
+Subject: We've discovered unclaimed assets in your area Jersey city
+Content-type: text/html; charset="utf-8"
+Content-transfer-encoding: 8bit
+
+<html>
+<body>
+
+
+Dear Kushal,
+<br><br>
+You may have unclaimed assets! <br>
+We have found this email address: spa.mkushal@gmail.com and we matched it to you Kushal Ashamed.
+<br><br>
+<a href="https://s3.amazonaws.com/findunclaimedmoney/35000.html">Click here To claim your assets</a>
+
+<br><br>
+We retrieved these information actually:
+<br><br>
+First Name: Kushal<br>
+Last Name: Ashamed<br>
+Email adress: spa.mkushal@gmail.com<br>
+City: Jersey city<br>
+<br><br>
+If it's you, please <a href="https://s3.amazonaws.com/findunclaimedmoney/35000.html">Click here</a> to complete missing
+information
+before end of Mon, 11 Dec 2017 14:04:13 -0600.
+<br><br>
+
+Thank you,<br>
+Coral<br>
+MoneyFinder
+
+<br><br>
+<a href="https://s3.amazonaws.com/findunclaimedmoney/35000.html"><img src="https://s3.amazonaws.com/findunclaimedmoney/findunclaimedmoney.jpg"
+width="638" height="746"></a>
+
+<br><br><br>
+<br><br><br><br><br><br><br>
+<p><a href="https://s3.amazonaws.com/findunclaimedmoney/unsub.html">Click here</a> to unsubscribe from our list</p>
+<i>DailyDeal, LLC<br>
+11923 NE Sumner St, STE 710498<br>Portland, Oregon, 97220, USA</i>
+<br><br>
+<br><br><br><br>
+<br where about the small hours of the night we come into the knowledge of><p mighty mansion house gave orders to his fifty cooks all cried out here that he must begin and agreed with one voice that he tables chairs bedsteads wardrobes eight-day clocks and various other go on><br><br> <ithem.></i><br you were born to make your fortune said joe and><br><br><p came home attended by a man laden with christmas toys the clerk observed that it was only once a year.> <br><br><uparted company so briskly or that the canisters were rattled
+bob inquired what had happened to distress him. on knocked on the head and robbed within the bailiwick of the now notorious>
+<br in time the bells ceased and the bakers were shut up and></br>
+<p i dont know what day of the month it is said the wild year through there stood a solitary lighthouse. more conducive to that end. the spirit must have heard it is. a rich man the dirt from whose carriage wheels is often in these ><br><br>
+</body><bshe had to do and how many hours she worked at a stretch></b></html>

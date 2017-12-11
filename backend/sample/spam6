@@ -1,0 +1,97 @@
+Delivered-To: spa.mkushal@gmail.com
+Received: by 10.80.144.227 with SMTP id d32csp1942527eda;
+        Sun, 10 Dec 2017 11:40:02 -0800 (PST)
+X-Google-Smtp-Source: AGs4zMYCud0VhZzsken5Ek7OuLaClEuEDxI/beXDoh3W/hFHIw5aXAuOA85Jy9a5xEmUR6zX5KkC
+X-Received: by 10.80.146.51 with SMTP id i48mr36425121eda.198.1512934802013;
+        Sun, 10 Dec 2017 11:40:02 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1512934801; cv=none;
+        d=google.com; s=arc-20160816;
+        b=07E1c/6Wiy2cMWTgF3/+f9+KVNQunDUsA/W7GrzYAjsjqm3wcokjrSKqokxGvhBpfa
+         HRDR8z5vknGTagrBMGeOukWtd5DuAW1987X4Cjb58Y8pVmli5DrFzhWGRswnfHnM0Swj
+         JqVwR6stv731yE+rfb9MX2aI15d13XvwVz+kTvcU2aE07337Jaaa2L9wuK96oIwZaqUv
+         vP/qnypyHBrffklWZtLi8WfHPJkyIzuSIN5F2Ar+JX2pqUSg25ZND9RZcGA0d8P1I22/
+         khfDQ18leCHxQXTeFH6UPlrRJmML0tzJ6722ZejXFYMxOs2FO+CpSBokVfP/LDFSBK8s
+         T7GA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-transfer-encoding:subject:to:from:message-id
+         :list-unsubscribe:sender:errors-to:date:dkim-signature
+         :arc-authentication-results;
+        bh=4g0mL6303snvcpJ3bal/9rD5YsAT7k807F6SFK4KAu0=;
+        b=jnlc4mAcLEbVul72A2Tx36wTiBujGX3XmDU1XTCijyH8r7FehfiEL1i//FeMdECH0e
+         s2Pl5d0T2FLKrdfrQCR15WbeOLsE+1rmZ3X68IMX9rMyOshVidxjpHWAfsshzuxMcaE7
+         OnQCfMHUhEH0990TE2BoiKGZ1FdTT9ztooo+GI0AzK9PrBkcoA+Okj+OEP/IqyCOnyd1
+         RBfOLekb229E5Vf2jxiMYxC7Zwh35x4Kpmm43v4jEX2IgrLVRgmdD3pctaMMgUkJGTcM
+         VF2AbC5k65u6WGjho30CApMc7t45fGueR3el0DbWprdew4ijfqvpiu9U00WMqnMhQ6pI
+         xXLQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@devqpl.cf header.s=default header.b=p0TEzfEs;
+       spf=temperror (google.com: error in processing during lookup of bounces+c12557i1839671030b46117u99674191+spa.mkushal=gmail.com@devqpl.cf: DNS error) smtp.mailfrom=bounces+c12557i1839671030b46117u99674191+spa.mkushal=gmail.com@devqpl.cf;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=dv3mjw3ud13cc1.w0.devqpl.cf
+Return-Path: <bounces+c12557i1839671030b46117u99674191+spa.mkushal=gmail.com@devqpl.cf>
+Received: from w0.devqpl.cf (2a004c87450f2de100000000000018fb.devqpl.cf. [2a00:4c87:450f:2de1::18fb])
+        by mx.google.com with ESMTPS id q24si1873584edb.107.2017.12.10.11.40.01
+        for <spa.mkushal@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 10 Dec 2017 11:40:01 -0800 (PST)
+Received-SPF: temperror (google.com: error in processing during lookup of bounces+c12557i1839671030b46117u99674191+spa.mkushal=gmail.com@devqpl.cf: DNS error) client-ip=2a00:4c87:450f:2de1::18fb;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@devqpl.cf header.s=default header.b=p0TEzfEs;
+       spf=temperror (google.com: error in processing during lookup of bounces+c12557i1839671030b46117u99674191+spa.mkushal=gmail.com@devqpl.cf: DNS error) smtp.mailfrom=bounces+c12557i1839671030b46117u99674191+spa.mkushal=gmail.com@devqpl.cf;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=dv3mjw3ud13cc1.w0.devqpl.cf
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=devqpl.cf; q=dns/txt; s=default; bh=4g0mL6303snvcpJ3bal/9rD5YsAT7k807F6SFK4KAu0=; h=from:sender:subject:to:mime-version:content-type:content-transfer-encoding:list-unsubscribe; b=p0TEzfEsUu/jUJC0WjA4/07xBlUQiJWoAgNGUHxtLp5dbGz3Q3hnEeayo6vLa3rgvkO44TGtXISC ljJQTkYslxL38ZLKbYB9sF6ea3dhzw09ZlUqmzCHeTnTr1TqAaBViDEbKsxiqEj7HI896HmIWKOi obpOAy9C3DlADlWOYvk=
+Date: Sun, 10 Dec 2017 19:40:01 GMT
+Return-Path: bounces+c12557i1839671030b46117u99674191+spa.mkushal=gmail.com@dv3mjw3ud13cc1.r0.devqpl.cf
+Errors-To: bounces+c12557i1839671030b46117u99674191+spa.mkushal=gmail.com@dv3mjw3ud13cc1.r0.devqpl.cf
+Sender: admin@dv3mjw3ud13cc1.r0.devqpl.cf
+List-Unsubscribe: <mailto:unsubscribe+c12557i1839671030b46117u99674191+spa.mkushal=gmail.com@dv3mjw3ud13cc1.r0.devqpl.cf>
+Message-Id: <777dfe2af3684033f59e38daa6b5bb@devqpl.cf>
+From: Victoria Dates <extensive.vddi46117@dv3mjw3ud13cc1.w0.devqpl.cf>
+To: spa.mkushal@gmail.com
+Subject: The way dating sites SHOULD be!
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!DOCTYPE html>
+<html lang=3D"en">
+  <head>
+    <meta charset=3D"utf-8">
+    <meta name=3D"description" content=3D"">
+    <meta name=3D"keywords" content=3D"">
+    <title></title>
+  </head>
+  <body>
+    <div align=3D"center"><a href=3D"http://dv3mjw3ud13cc1.w0.devqpl.cf/t/b=
+TipjwBfYmp223NSPEJbQAAA/g/zFb" target=3D"_blank"><img alt=3D"" src=3D"http:=
+//dv3mjw3ud13cc1.w0.devqpl.cf/files-bTipjwBfYmp223NSPEJbQAAA/2/1447/victori=
+abride06.jpg" width=3D"620" height=3D"660" /></a>
+    </div>
+    <p>&nbsp;
+    </p><center>To stop receiving messages, please visit<a href=3D"http://d=
+v3mjw3ud13cc1.w0.devqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/g/zFj" target=3D"_bla=
+nk"> here </a>or send request to:
+    <br />Communitainment Inc.
+    <br />815 N Royal Str, Suite 202, Alexandria, VA 22314</center>
+    <p>&nbsp;
+    </p>
+    <p>&nbsp;
+    </p>
+    <p>&nbsp;
+    </p>
+    <p>&nbsp;
+    </p>
+    <p>&nbsp;
+    </p>
+    <p>&nbsp;
+    </p>
+    <p>&nbsp;
+    </p>
+    <p>&nbsp;
+    </p>
+    <p><a href=3D"http://dv3mjw3ud13cc1.w0.devqpl.cf/t/bTipjwBfYmp223NSPEJb=
+QAAA/g/NtQ"><img alt=3D"" src=3D"http://dv3mjw3ud13cc1.w0.devqpl.cf/files-b=
+TipjwBfYmp223NSPEJbQAAA/2/1447/un.jpg" width=3D"386" height=3D"26" /></a>
+    </p>
+  <img alt=3D"" width=3D"1" height=3D"1" src=3D"http://dv3mjw3ud13cc1.w0.de=
+vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
+</html>
