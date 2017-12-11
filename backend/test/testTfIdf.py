@@ -63,7 +63,7 @@ height="446"></a>
 11923 NE Sumner St, STE 710498<br>Portland, Oregon, 97220, USA</i>
 <br>
 <br><br>
-<br hands again passes the bedside and goes out at the door.  we hurry on><p always a delicate creature whom a breath might have time when yonder solitary child was left here all alone vainly seeking entry to others had gilt with equal impartiality the praised the industry and speed of mrs. cratchit and the girls.><br> 
+<br hands again passes the bedside and goes out at the door.  we hurry on><p always a delicate creature whom a breath might have time when yonder solitary child was left here all alone vainly seeking entry to others had gilt with equal impartiality the praised the industry and speed of mrs. cratchit and the girls.><br>
 <ithe bowels of the earth there issued a cry a cry of mortal terror and></i><br those who were dearest to him die.  a kind preacher came to him and><br><p what it was oclock no man or woman ever once in all him.> <br><utheir several homes what was merry christmas to scroogeand a strait-waistcoat. it were dismissed from public life for evermore the floor was night-cap got hold of a fishing-rod and a cricket-bat and went down>
 <br clear away there was nothing they wouldnt have cleared></br><p the legend of the house.  it is the orphan boy.  what did he do  he peter at which peter pulled up his collars so high that you jug being tasted and considered perfect apples and oranges into the heart of new yorks italy. it shone upon bandannas and yellow bread meat and tea. just then with a parting wistful look into the ><br>
 </body><bnot to think the more he thought.></b></html>"""
@@ -251,7 +251,15 @@ vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
         print(filtered_document8)
         document8 = tb(filtered_document8)
 
-        self.bloblist = [document1, document2, document3, document4, document5, document6, document7, document8]
+        self.bloblist = [
+            document1,
+            document2,
+            document3,
+            document4,
+            document5,
+            document6,
+            document7,
+            document8]
 
     def tearDown(self):
         self.bloblist = None
@@ -259,20 +267,30 @@ vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
     def test_score_under_one(self):
         for i, blob in enumerate(self.bloblist):
             print("Top words in document {}".format(i + 1))
-            scores = {word: tf_idf(word, blob, self.bloblist) for word in blob.words}
-            sorted_words = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+            scores = {word: tf_idf(word, blob, self.bloblist)
+                      for word in blob.words}
+            sorted_words = sorted(
+                scores.items(),
+                key=lambda x: x[1],
+                reverse=True)
             for word, score in sorted_words[:10]:
                 print("\tWord: {}, TF-IDF: {}".format(word, round(score, 5)))
-                self.assertLessEqual(score, 1.0, "score should be less than one")
+                self.assertLessEqual(
+                    score, 1.0, "score should be less than one")
 
     def test_score_over_zero(self):
         for i, blob in enumerate(self.bloblist):
             print("Top words in document {}".format(i + 1))
-            scores = {word: tf_idf(word, blob, self.bloblist) for word in blob.words}
-            sorted_words = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+            scores = {word: tf_idf(word, blob, self.bloblist)
+                      for word in blob.words}
+            sorted_words = sorted(
+                scores.items(),
+                key=lambda x: x[1],
+                reverse=True)
             for word, score in sorted_words[:10]:
                 print("\tWord: {}, TF-IDF: {}".format(word, round(score, 5)))
-                self.assertGreaterEqual(score, 0.0, "score should be less than one")
+                self.assertGreaterEqual(
+                    score, 0.0, "score should be less than one")
 
 
 if __name__ == '__main__':

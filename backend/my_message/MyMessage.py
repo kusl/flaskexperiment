@@ -32,8 +32,14 @@ class MyMessage(shared.db.Model):
         return '<MyMessage %r>' % self.id
 
     def __call__(self):
-        return {"id": self.id, "sender": self.sender, "subject": self.subject, "sent": self.sent,
-                "receiver": self.receiver, "received": self.received, "body": self.body}
+        return {
+            "id": self.id,
+            "sender": self.sender,
+            "subject": self.subject,
+            "sent": self.sent,
+            "receiver": self.receiver,
+            "received": self.received,
+            "body": self.body}
 
     @property
     def serialize(self):

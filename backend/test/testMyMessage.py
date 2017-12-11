@@ -8,9 +8,14 @@ from my_message.MyMessage import MyMessage
 class MyMessageTestCase(unittest.TestCase):
 
     def test_constructor(self):
-        message = MyMessage(message_id=uuid.uuid4(), subject="hello, world", sender="hikingfan@gmail.com",
-                            sent=datetime.utcnow(), receiver="kushaldeveloper@gmail.com", received=datetime.utcnow(),
-                            body="this is an email")
+        message = MyMessage(
+            message_id=uuid.uuid4(),
+            subject="hello, world",
+            sender="hikingfan@gmail.com",
+            sent=datetime.utcnow(),
+            receiver="kushaldeveloper@gmail.com",
+            received=datetime.utcnow(),
+            body="this is an email")
         self.assertEqual(message.body, "this is an email")
         self.assertEqual(message.subject, "hello, world")
         self.assertEqual(message.sender, "hikingfan@gmail.com")
