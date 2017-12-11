@@ -275,7 +275,7 @@ vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
                 self.assertLessEqual(
                     score, 1.0, "score should be less than one")
 
-    def test_score_over_zero(self):
+    def test_score_over_negative_one(self):
         for i, blob in enumerate(self.blob_list):
             print("Top words in document {}".format(i + 1))
             scores = {word: tf_idf(word, blob, self.blob_list)
@@ -287,7 +287,7 @@ vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
             for word, score in sorted_words[:10]:
                 print("\tWord: {}, TF-IDF: {}".format(word, round(score, 5)))
                 self.assertGreaterEqual(
-                    score, 0.0, "score should be less than one")
+                    score, -1.0, "score should be less than one")
 
 
 if __name__ == '__main__':
