@@ -3,8 +3,7 @@ import uuid
 from datetime import datetime
 
 import random
-from flask import Blueprint
-from flask import jsonify
+from flask import Blueprint, jsonify, render_template
 
 import shared
 from my_message.MyMessage import MyMessage
