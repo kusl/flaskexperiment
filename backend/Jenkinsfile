@@ -2,8 +2,13 @@ pipeline {
    environment {
      FOO = "foo"
    }
+   dir ('backend') {
+    sh 'pwd'
+   }
 
-   agent any
+   agent {
+     dockerfile true
+   }
    stages {
        stage("first") {
            steps {
