@@ -8,7 +8,7 @@ pipeline {
        stage("first") {
            steps {
                sh "echo ${FOO}"
-               sh "echo datetime"
+               sh "echo ls -a"
            }
        }
    }
