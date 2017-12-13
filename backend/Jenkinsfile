@@ -10,6 +10,14 @@ pipeline {
                sh "echo ${FOO}"
                sh "ls -a"
                sh "pwd"
+               cd backend
+               docker --version
+               docker-compose --version
+               docker stop $(docker ps -a -q)
+               docker rm $(docker ps -a -q)
+               docker rmi $(docker images -q)
+               cd backend
+               docker-compose build
            }
        }
    }
