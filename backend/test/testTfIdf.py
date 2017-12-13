@@ -253,9 +253,10 @@ vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
 
         # few from http://www.hoax-slayer.com/nigerian-scam-examples.html
 
-        document9 = """FROM: MR DAN PATRICK. DEMOCRATIC REPUBLIC OF CONGO. ALTERNATIVE EMAIL: (patrickdan@rediffmail.com). Dear Sir, SEEKING YOUR IMMEDIATE ASSISTANCE. Please permit me to make your acquaintance in so informal a manner. This is necessitated by my urgent need to reach a dependable and trust wordy foreign partner. This request may seem strange and unsolicited but I will crave your indulgence and pray that you view it seriously. My name is. DAN PATRICK of the Democratic Republic of Congo and One of the close aides to the former President of the Democratic Republic of Congo LAURENT KABILA of blessed memory, may his soul rest in peace. Due to the military campaign of LAURENT KABILA to force out the rebels in my country, I and some of my colleagues were instructed by Late President Kabila to go abroad to purchase arms and ammunition worth of Twenty Million, Five Hundred Thousand United States Dollars only (US$20,500,000.00) to fight the rebel group. But when President Kabila was killed in a bloody shoot-out by one of his aide a day before we were schedule to travel out of Congo, We immediately decided to divert the fund into a private security company here in Congo for safe keeping. The security of the said amount is presently being threatened here following the arrest and seizure of properties of Col.Rasheidi Karesava (One of the aides to Laurent Kabila) a tribesman, and some other Military Personnel from our same tribe, by the new President of the Democratic Republic of Congo, the son of late President Laurent Kabila, Joseph Kabila. In view of this, we need a reliable and trustworthy foreign partner who can assist us to move this money out of my country as the beneficiary. WE have sufficient ''CONTACTS'' to move the fund under Diplomatic Cover to a security company in the Europe in your name. This is to ensure that the Diplomatic Baggage is marked ''CONFIDENTIAL'' and it will not pass through normal custom/airport screening and clearance. Our inability to move this money out of Congo all This while lies on our lack of trust on our supposed good friends (western countries) who suddenly became hostile to those of us who worked with the late President Kabila, immediately after his son took office. Though we have neither seen nor met each other, the information we gathered from an associate who has worked in your country has encouraged and convinced us that with your sincere assistance, this transaction will be properly handled with modesty and honesty to a huge success within two weeks. The said money is a state fund and therefore requires a total confidentiality. Thus, if you are willing to assist us move this fund out of Congo, you can contact me through my email address above with your telephone, fax number and personal information to enable us discuss the modalities and what will be your share (percentage) for assisting us. I must use this opportunity and medium to implore You to exercise the utmost indulgence to keep this Matter extraordinarily confidential, Whatever your Decision, while I await your prompt response. NOTE: FOR CONFIDENTIALITY, I WILL ADVISE YOU REPLY ME ON MY ALTERNATIVE EMAIL BOX (patrickdan@rediffmail.com).Thank you and God Bless. Best Regards, MR DAN PATRICK."""
+        document9 = tb(
+            """FROM: MR DAN PATRICK. DEMOCRATIC REPUBLIC OF CONGO. ALTERNATIVE EMAIL: (patrickdan@rediffmail.com). Dear Sir, SEEKING YOUR IMMEDIATE ASSISTANCE. Please permit me to make your acquaintance in so informal a manner. This is necessitated by my urgent need to reach a dependable and trust wordy foreign partner. This request may seem strange and unsolicited but I will crave your indulgence and pray that you view it seriously. My name is. DAN PATRICK of the Democratic Republic of Congo and One of the close aides to the former President of the Democratic Republic of Congo LAURENT KABILA of blessed memory, may his soul rest in peace. Due to the military campaign of LAURENT KABILA to force out the rebels in my country, I and some of my colleagues were instructed by Late President Kabila to go abroad to purchase arms and ammunition worth of Twenty Million, Five Hundred Thousand United States Dollars only (US$20,500,000.00) to fight the rebel group. But when President Kabila was killed in a bloody shoot-out by one of his aide a day before we were schedule to travel out of Congo, We immediately decided to divert the fund into a private security company here in Congo for safe keeping. The security of the said amount is presently being threatened here following the arrest and seizure of properties of Col.Rasheidi Karesava (One of the aides to Laurent Kabila) a tribesman, and some other Military Personnel from our same tribe, by the new President of the Democratic Republic of Congo, the son of late President Laurent Kabila, Joseph Kabila. In view of this, we need a reliable and trustworthy foreign partner who can assist us to move this money out of my country as the beneficiary. WE have sufficient ''CONTACTS'' to move the fund under Diplomatic Cover to a security company in the Europe in your name. This is to ensure that the Diplomatic Baggage is marked ''CONFIDENTIAL'' and it will not pass through normal custom/airport screening and clearance. Our inability to move this money out of Congo all This while lies on our lack of trust on our supposed good friends (western countries) who suddenly became hostile to those of us who worked with the late President Kabila, immediately after his son took office. Though we have neither seen nor met each other, the information we gathered from an associate who has worked in your country has encouraged and convinced us that with your sincere assistance, this transaction will be properly handled with modesty and honesty to a huge success within two weeks. The said money is a state fund and therefore requires a total confidentiality. Thus, if you are willing to assist us move this fund out of Congo, you can contact me through my email address above with your telephone, fax number and personal information to enable us discuss the modalities and what will be your share (percentage) for assisting us. I must use this opportunity and medium to implore You to exercise the utmost indulgence to keep this Matter extraordinarily confidential, Whatever your Decision, while I await your prompt response. NOTE: FOR CONFIDENTIALITY, I WILL ADVISE YOU REPLY ME ON MY ALTERNATIVE EMAIL BOX (patrickdan@rediffmail.com).Thank you and God Bless. Best Regards, MR DAN PATRICK.""")
 
-        document10 = """Dear Friend.
+        document10 = tb("""Dear Friend.
 
 As you read this, I don't want you to feel sorry for me, because, I believe everyone will die someday.
 
@@ -279,8 +280,8 @@ While I await to hear from you, may God be with you and your entire family.
 
 Remain blessed.
 
-Mr.Peter Lawson"""
-        document11 = """Agabi and Associates.
+Mr.Peter Lawson""")
+        document11 = tb("""Agabi and Associates.
 Solicitors and Advocates.
 5th floor, Unity House.
 Lagos.
@@ -301,8 +302,8 @@ I have all necessary legal documents that can be used to back up any claim we ma
 
 Please get in touch with me by email and send to me your telephone and fax numbers to enable us discuss further about the details of this transaction.
 
-Best regards, Mr. paul agabi."""
-        document12 = """From:Mohammed Abacha Lagos-Nigeria Tel: 234-80-34069502
+Best regards, Mr. paul agabi.""")
+        document12 = tb("""From:Mohammed Abacha Lagos-Nigeria Tel: 234-80-34069502
 
 Dear Sir/Madam
 
@@ -326,8 +327,8 @@ Also this transaction demands absolute confidentiality.On no condition must you 
 
 Best Regards,
 
-Mohammed Abacha."""
-        document13 = """From: Dr.Goronyo Baba.
+Mohammed Abacha.""")
+        document13 = tb("""From: Dr.Goronyo Baba.
 
 Satellite Tel: Note:Do not send emails.You can contact me directly on the tel.number or by sending me a satellite message stating your telephone number and email address contact on this number just given to you using the link online below. http://www.iridium.com/..there, you will see send a satellite message to my sat.tel.number- 881-631-410-574
 
@@ -363,7 +364,7 @@ I wait in anticipation of your fullest co-operation. Yours Faithfully,
 
 Dr.Goronyo Baba.
 
-Send me your email address and tel.numberif interested for re- verification that you actually received this mail. """
+Send me your email address and tel.numberif interested for re- verification that you actually received this mail. """)
         self.blob_list = [
             document4,
             document5,
