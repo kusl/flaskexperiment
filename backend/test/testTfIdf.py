@@ -407,6 +407,8 @@ Send me your email address and tel.numberif interested for re- verification that
                 print("\tWord: {}, TF-IDF: {}".format(word, round(score, 5)))
                 self.assertGreaterEqual(
                     score, -1.0, "score should be less than one")
+        import os
+        print(os.environ['backend_db'])
 
 
 if __name__ == '__main__':
