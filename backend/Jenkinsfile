@@ -2,9 +2,6 @@ pipeline {
    environment {
      FOO = "foo"
    }
-   dir ('backend') {
-    sh 'pwd'
-   }
 
    agent {
      dockerfile true
