@@ -408,6 +408,7 @@ Send me your email address and tel.numberif interested for re- verification that
                 self.assertGreaterEqual(
                     score, -1.0, "score should be less than one")
         import os
+        print("now we print all the environment variables:")
         for a in os.environ:
             print('Var: ', a, 'Value: ', os.getenv(a))
 
