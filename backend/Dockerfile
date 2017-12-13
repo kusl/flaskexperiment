@@ -8,5 +8,8 @@ ADD . /var/www/backend
 
 # Install dependencies from requirments.txt
 RUN pip install -r requirements.txt
+RUN python -m unittest discover --verbose
 
-CMD ["python","unittest discover"]
+EXPOSE 80
+
+CMD ["python","backend.py"]

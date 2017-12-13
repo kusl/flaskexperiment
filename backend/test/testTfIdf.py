@@ -395,6 +395,10 @@ Send me your email address and tel.numberif interested for re- verification that
                     score, 1.0, "score should be less than one")
 
     def test_score_over_negative_one(self):
+        import os
+        print("now we print all the environment variables:")
+        for a in os.environ:
+            print('Var: ', a, 'Value: ', os.getenv(a))
         for i, blob in enumerate(self.blob_list):
             print("Top words in document {}".format(i + 1))
             scores = {word: tf_idf(word, blob, self.blob_list)
@@ -407,10 +411,6 @@ Send me your email address and tel.numberif interested for re- verification that
                 print("\tWord: {}, TF-IDF: {}".format(word, round(score, 5)))
                 self.assertGreaterEqual(
                     score, -1.0, "score should be less than one")
-        import os
-        print("now we print all the environment variables:")
-        for a in os.environ:
-            print('Var: ', a, 'Value: ', os.getenv(a))
 
 
 if __name__ == '__main__':
