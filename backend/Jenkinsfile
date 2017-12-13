@@ -8,7 +8,8 @@ pipeline {
        stage("first") {
            steps {
                sh "echo ${FOO}"
-               sh "echo ls -a"
+               sh "ls -a"
+               sh "pwd"
            }
        }
    }
