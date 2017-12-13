@@ -15,11 +15,10 @@ pipeline {
                sh "echo ${FOO}"
                sh "ls -a"
                sh "pwd"
-               cd backend
-               which docker
-               which docker-compose
-               cd backend
-               docker-compose build
+               sh "cd backend"
+               sh "which docker"
+               sh "which docker-compose"
+               sh "docker-compose build"
            }
        }
    }
