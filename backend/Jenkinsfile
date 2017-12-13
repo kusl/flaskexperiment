@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Example') {
       steps {
-        echo 'Hello, world!'
+        pip3 install -r requirements.txt;
+        python3 -m unittest discover --verbose
       }
     }
   }
