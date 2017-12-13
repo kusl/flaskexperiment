@@ -11,8 +11,8 @@ pipeline {
                sh "ls -a"
                sh "pwd"
                cd backend
-               docker --version
-               docker-compose --version
+               which docker
+               which docker-compose
                docker stop $(docker ps -a -q)
                docker rm $(docker ps -a -q)
                docker rmi $(docker images -q)
