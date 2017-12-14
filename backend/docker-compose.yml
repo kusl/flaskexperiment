@@ -17,5 +17,5 @@ services:
       - POSTGRES_USER=dbadmin
       - POSTGRES_PASSWORD=dbadmin
     ports:
-      - "5432:5433"
+      - "5432:5432"
 
