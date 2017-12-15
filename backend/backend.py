@@ -17,13 +17,6 @@ def drop_and_create():
     return render_template('pages/index.html')
 
 
-@app.route('/', methods=['GET'])
-def drop_and_create():
-    shared.db.drop_all()
-    shared.db.create_all()
-    return render_template('pages/index.html')
-
-
 # a route for generating sitemap.xml
 @app.route('/sitemap.xml', methods=['GET'])
 def sitemap():
