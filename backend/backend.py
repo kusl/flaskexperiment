@@ -24,7 +24,7 @@ def sitemap():
     pages = []
     from datetime import datetime
     from datetime import timedelta
-    ten_days_ago = datetime.now() - timedelta(days=10).date().isoformat()
+    ten_days_ago = (datetime.now() - timedelta(days=10)).date().isoformat()
     # static pages
     for rule in app.url_map.iter_rules():
         if "GET" in rule.methods and len(rule.arguments) == 0:
