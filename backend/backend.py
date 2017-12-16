@@ -29,7 +29,7 @@ def sitemap():
     for rule in app.url_map.iter_rules():
         if "GET" in rule.methods and len(rule.arguments) == 0:
             pages.append(
-                [rule.rule, ten_days_ago]
+                [f"http://45.55.240.4/{rule.rule}", ten_days_ago]
             )
     #
     # # user model pages
