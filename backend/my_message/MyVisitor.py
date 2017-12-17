@@ -1,16 +1,13 @@
-from sqlalchemy.dialects.postgresql.json import JSONB
-
 import shared
 
 
 def save_visitor(this_request) -> bool:
     import uuid
     from datetime import datetime
-    from flask import jsonify
     visitor = MyVisitor(visitor_id=uuid.uuid4(),
                         visitor_ip=this_request.remote_addr,
                         visit_time=datetime.now(),
-                        visitor_info=jsonify({"path": this_request.full_path}))
+                        url=this_request.full_path)
     visitor.save()
     return True
 
@@ -19,7 +16,7 @@ class MyVisitor(shared.db.Model):
     id = shared.db.Column(shared.db.String(40), primary_key=True)
     ip = shared.db.Column(shared.db.UnicodeText, nullable=False)
     visit_time = shared.db.Column(shared.db.DateTime, nullable=False)
-    visitor_info = shared.db.Column(JSONB)
+    url = shared.db.Column(shared.db.UnicodeText, nullable=False)
 
     def __init__(
             self,
@@ -30,7 +27,7 @@ class MyVisitor(shared.db.Model):
         self.id = visitor_id
         self.ip = visitor_ip
         self.visit_time = visit_time
-        self.visitor_info = visitor_info
+        self.url = visitor_info
 
     def __repr__(self):
         return '<MyVisitor %r>' % self.id
@@ -44,6 +41,7 @@ class MyVisitor(shared.db.Model):
     @property
     def serialize(self):
         return {
+            "id": self.id,
             "ip": self.ip,
             "time": self.visit_time
         }
