@@ -1,8 +1,11 @@
-from flask import Flask, render_template, make_response
-
+from flask import Flask, render_template, make_response, request, jsonify
+from datetime import datetime, timedelta
 import secret
 import shared
+import uuid
 from routes.MyMessageRoute import MyMessageRoute
+from my_message.MyVisitor import MyVisitor
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = secret.SQLALCHEMY_DATABASE_URI
@@ -12,9 +15,24 @@ app.register_blueprint(MyMessageRoute)
 
 @app.route('/', methods=['GET'])
 def drop_and_create():
+    visitor = MyVisitor(visitor_id = uuid.uuid4(),visitor_ip = request.remote_addr, visit_time = datetime.now(), visitor_info = "{}")
+    visitor.save()
+    return render_template('pages/index.html')
+
+
+@app.route('/clear', methods=['GET'])
+def clear():
     shared.db.drop_all()
     shared.db.create_all()
-    return render_template('pages/index.html')
+    return jsonify({"status": "success"})
+
+
+@app.route('/get')
+def get_first_visitor():
+    result = MyVisitor.query.first()
+    if result is None:
+        return jsonify({"error": "There is no message"})
+    return jsonify(result.serialize)
 
 
 # a route for generating sitemap.xml
@@ -22,8 +40,6 @@ def drop_and_create():
 def sitemap():
     """Generate sitemap.xml. Makes a list of urls and date modified."""
     pages = []
-    from datetime import datetime
-    from datetime import timedelta
     ten_days_ago = (datetime.now() - timedelta(days=10)).date().isoformat()
     # static pages
     for rule in app.url_map.iter_rules():
@@ -42,7 +58,6 @@ def sitemap():
     sitemap_xml = render_template('pages/sitemap.xml', pages=pages)
     response = make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"
-
     return response
 
 
