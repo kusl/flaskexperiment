@@ -33,11 +33,14 @@ def clear():
 
 @app.route('/get')
 def get_first_visitor():
-    result = MyVisitor.query.all()
-    if result is None:
-        return jsonify({"error": "There is no message"})
-    print(result)
-    return jsonify(result.serialize)
+    results = MyVisitor.query.all()
+    if results is None:
+        return jsonify({"error": "There is no visitor"})
+    visitors = []
+    for result in results:
+        visitor = MyVisitor(result.id, result.ip, result.visit_time, result.visit_info)
+        visitors.append(visitor)
+    return jsonify(my_visitor=[my_visitor.serialize() for my_visitor in visitors])
 
 
 # a route for generating sitemap.xml
