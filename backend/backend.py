@@ -19,7 +19,7 @@ def drop_and_create():
     visitor = MyVisitor(visitor_id=uuid.uuid4(),
                         visitor_ip=request.remote_addr,
                         visit_time=datetime.now(),
-                        visitor_info="{}")
+                        visitor_info=jsonify({"path": request.full_path}))
     visitor.save()
     return render_template('pages/index.html')
 
