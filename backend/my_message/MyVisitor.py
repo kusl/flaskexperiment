@@ -2,7 +2,6 @@ import shared
 from sqlalchemy.dialects.postgresql.json import JSONB
 
 class MyMessage(shared.db.Model):
-    __tablename__ = None
     id = shared.db.Column(shared.db.String(40), primary_key=True)
     ip = shared.db.Column(shared.db.UnicodeText, nullable=False)
     visit_time = shared.db.Column(shared.db.DateTime, nullable=False)
