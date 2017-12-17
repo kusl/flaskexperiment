@@ -38,7 +38,7 @@ def get_first_visitor():
         return jsonify({"error": "There is no visitor"})
     visitors = []
     for result in results:
-        visitor = MyVisitor(result.id, result.ip, result.visit_time, result.visit_info)
+        visitor = MyVisitor(result.id, result.ip, result.visit_time, result.visitor_info)
         visitors.append(visitor)
     return jsonify(my_visitor=[my_visitor.serialize() for my_visitor in visitors])
 
