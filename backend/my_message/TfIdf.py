@@ -5,8 +5,8 @@ def tf(word, blob):
     return blob.words.count(word) / len(blob.words)
 
 
-def n_containing(word, bloblist):
-    return sum(1 for blob in bloblist if word in blob.words)
+def n_containing(word, blob_list):
+    return sum(1 for blob in blob_list if word in blob.words)
 
 
 def idf(word, bloblist):
