@@ -1,5 +1,5 @@
 from flask import Flask, render_template, make_response, request
-
+from datetime import datetime, timedelta
 import secret
 import shared
 from routes.MyMessageRoute import MyMessageRoute
@@ -13,6 +13,7 @@ app.register_blueprint(MyMessageRoute)
 @app.route('/', methods=['GET'])
 def drop_and_create():
     request_ip = request.remote_addr
+
     print(request_ip)
     shared.db.drop_all()
     shared.db.create_all()
@@ -24,8 +25,6 @@ def drop_and_create():
 def sitemap():
     """Generate sitemap.xml. Makes a list of urls and date modified."""
     pages = []
-    from datetime import datetime
-    from datetime import timedelta
     ten_days_ago = (datetime.now() - timedelta(days=10)).date().isoformat()
     # static pages
     for rule in app.url_map.iter_rules():
