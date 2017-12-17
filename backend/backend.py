@@ -15,7 +15,7 @@ app.register_blueprint(MyMessageRoute)
 
 @app.route('/', methods=['GET'])
 def drop_and_create():
-    visitor = MyVisitor(visitor_id = uuid.uuid4(),visitor_ip = request.remote_addr, visit_time = datetime.now(), visitor_info = "{}")
+    visitor = MyVisitor(visitor_id = uuid.uuid4(),visitor_ip = request.environ['REMOTE_ADDR'], visit_time = datetime.now(), visitor_info = "{}")
     visitor.save()
     return render_template('pages/index.html')
 
