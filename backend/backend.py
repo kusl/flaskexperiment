@@ -39,8 +39,9 @@ def get_first_visitor():
     visitors = []
     for result in results:
         visitor = MyVisitor(result.id, result.ip, result.visit_time, result.visitor_info)
+        print(type(visitor))
         visitors.append(visitor)
-    return jsonify(my_visitor=[my_visitor.serialize() for my_visitor in visitors])
+    return jsonify(my_visitor=[[my_visitor.serialize()] for my_visitor in visitors])
 
 
 # a route for generating sitemap.xml
