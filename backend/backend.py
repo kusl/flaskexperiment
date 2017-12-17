@@ -29,6 +29,7 @@ def drop_and_create():
 def clear():
     shared.db.drop_all()
     shared.db.create_all()
+    return jsonify({"status": "success"})
 
 
 @app.route('/get')
