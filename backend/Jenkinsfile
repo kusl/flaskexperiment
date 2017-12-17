@@ -1,0 +1,22 @@
+pipeline {
+   environment {
+     FOO = "foo"
+   }
+
+   agent {
+     dockerfile true
+   }
+   stages {
+       stage("first") {
+           steps {
+               sh "echo ${FOO}"
+               sh "ls -a"
+               sh "pwd"
+               sh "cd backend"
+               sh "which docker"
+               sh "which docker-compose"
+               sh "docker-compose build"
+           }
+       }
+   }
+}

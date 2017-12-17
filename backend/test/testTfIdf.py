@@ -70,7 +70,6 @@ height="446"></a>
         s = MyParser.MyParser()
         s.feed(unfiltered_document4)
         filtered_document4 = s.get_data()
-        print(filtered_document4)
         document4 = tb(filtered_document4)
 
         unfiltered_document5 = """<html><br><head flask of old rhine winewhere the reverberating doors close on their it matters little she said softly. to you very little. jokes nor did he feel in his heart by any means><body><br>
@@ -106,7 +105,6 @@ Virgie Coulson
 </body><bfounder of the feast></b></html>"""
         s.feed(unfiltered_document5)
         filtered_document5 = s.get_data()
-        print(filtered_document5)
         document5 = tb(filtered_document5)
 
         unfiltered_document6 = """<html><br><br><head this was not addressed to scrooge or to any one whom he only a fortnight now said old cheeseman to the holidays.  who stops three spirits.>
@@ -148,7 +146,6 @@ endeavour to assist your struggling family and we will discuss time to you but a
 </body><bhave little time upon my hands and if you will be so good as to take></b></html>"""
         s.feed(unfiltered_document6)
         filtered_document6 = s.get_data()
-        print(filtered_document6)
         document6 = tb(filtered_document6)
 
         unfiltered_document7 = """<html>
@@ -198,7 +195,6 @@ bob inquired what had happened to distress him. on knocked on the head and robbe
 
         s.feed(unfiltered_document7)
         filtered_document7 = s.get_data()
-        print(filtered_document7)
         document7 = tb(filtered_document7)
 
         unfiltered_document8 = """
@@ -248,15 +244,167 @@ vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
 """
         s.feed(unfiltered_document8)
         filtered_document8 = s.get_data()
-        print(filtered_document8)
         document8 = tb(filtered_document8)
 
+        # few from http://www.hoax-slayer.com/nigerian-scam-examples.html
+
+        document9 = tb(
+            """FROM: MR DAN PATRICK. DEMOCRATIC REPUBLIC OF CONGO. ALTERNATIVE EMAIL: (patrickdan@rediffmail.com). Dear Sir, SEEKING YOUR IMMEDIATE ASSISTANCE. Please permit me to make your acquaintance in so informal a manner. This is necessitated by my urgent need to reach a dependable and trust wordy foreign partner. This request may seem strange and unsolicited but I will crave your indulgence and pray that you view it seriously. My name is. DAN PATRICK of the Democratic Republic of Congo and One of the close aides to the former President of the Democratic Republic of Congo LAURENT KABILA of blessed memory, may his soul rest in peace. Due to the military campaign of LAURENT KABILA to force out the rebels in my country, I and some of my colleagues were instructed by Late President Kabila to go abroad to purchase arms and ammunition worth of Twenty Million, Five Hundred Thousand United States Dollars only (US$20,500,000.00) to fight the rebel group. But when President Kabila was killed in a bloody shoot-out by one of his aide a day before we were schedule to travel out of Congo, We immediately decided to divert the fund into a private security company here in Congo for safe keeping. The security of the said amount is presently being threatened here following the arrest and seizure of properties of Col.Rasheidi Karesava (One of the aides to Laurent Kabila) a tribesman, and some other Military Personnel from our same tribe, by the new President of the Democratic Republic of Congo, the son of late President Laurent Kabila, Joseph Kabila. In view of this, we need a reliable and trustworthy foreign partner who can assist us to move this money out of my country as the beneficiary. WE have sufficient ''CONTACTS'' to move the fund under Diplomatic Cover to a security company in the Europe in your name. This is to ensure that the Diplomatic Baggage is marked ''CONFIDENTIAL'' and it will not pass through normal custom/airport screening and clearance. Our inability to move this money out of Congo all This while lies on our lack of trust on our supposed good friends (western countries) who suddenly became hostile to those of us who worked with the late President Kabila, immediately after his son took office. Though we have neither seen nor met each other, the information we gathered from an associate who has worked in your country has encouraged and convinced us that with your sincere assistance, this transaction will be properly handled with modesty and honesty to a huge success within two weeks. The said money is a state fund and therefore requires a total confidentiality. Thus, if you are willing to assist us move this fund out of Congo, you can contact me through my email address above with your telephone, fax number and personal information to enable us discuss the modalities and what will be your share (percentage) for assisting us. I must use this opportunity and medium to implore You to exercise the utmost indulgence to keep this Matter extraordinarily confidential, Whatever your Decision, while I await your prompt response. NOTE: FOR CONFIDENTIALITY, I WILL ADVISE YOU REPLY ME ON MY ALTERNATIVE EMAIL BOX (patrickdan@rediffmail.com).Thank you and God Bless. Best Regards, MR DAN PATRICK.""")
+
+        document10 = tb("""Dear Friend.
+
+As you read this, I don't want you to feel sorry for me, because, I believe everyone will die someday.
+
+My name is Peter Lawson,a merchant in Dubai, in the U.A.E.I have been diagnosed with Esophageal Cancer which was discovered very late,due to my laxity in carrying for my health. It has defiled all forms of medicine, and right now I have only about a few months to live, according to medical experts.
+
+I have not particularly lived my life so well, as I never really cared for anyone not even myself but my business. Though I am very rich, I was never generous, I was always hostile to people and only focus on my business as that was the only thing I cared for. But now I regret all this as I now know that there is more to life than just wanting to have or make all the money in the world. I believe when God gives me a second chance to come to this world I would live my life a different way from how I have lived it.
+
+Now that God ! has called me, I have willed and given most of my properties and assets to my immediate and extended family members and as well as a few close friends. I want God to be merciful to me and accept my soul and so, I have decided to give arms to charity organizations and give succour and confort to the less priviledged in our societies, as I want this to be one of the last good deeds I do on earth.
+
+So far, I have distributed money to some charity organizations in the U.A.E, Algeria and Malaysia. Now that my health has deteriorated so badly, I cannot do this my self anymore. I once asked members of my family to close one of my accounts and distribute the money which I have there to charity organization and to the less priviledged in Bulgaria and Pakistan, they refused and kept the money to themselves. Hence, I do not trust them anymore, as they seem not to be contended with what I have left for them.
+
+The last of my money which no one knows of is the huge cash deposit of twenty four million dollars that I have with a Security Company in Europe for safe keeping. I will want you to help me collect this deposit and disburse it to some charity organizations and to the less priviledged.
+
+Please send me a mail to indicate if you will assist me in this disbursement.
+
+I have set aside 10% for you for your time and patience.
+
+You can e-mail me at:plawson@hknetmail.com
+
+While I await to hear from you, may God be with you and your entire family.
+
+Remain blessed.
+
+Mr.Peter Lawson""")
+        document11 = tb("""Agabi and Associates.
+Solicitors and Advocates.
+5th floor, Unity House.
+Lagos.
+
+Dear (recipaints name),
+
+I am Mr. paul agabi, a Lawyer by profession. I am the personal attorney to Mr. Charles (my surname) , a national of your country, who used to work with Chevron Oil Exploration Company in Nigeria, herein after shall be referred to as my client.
+
+On the 21st of April 2000, my client, his wife and their onlye child were involved in a car accident along Lagos - Ibadan express road. All occupants of the vehicle unfortunately lost there lives.
+
+Since then I have made several enquiries to your embassy to locate any of my clients extended relatives. This has proved unsuccessful. I came to know about you through an enquiry I was making in the internet, and I found out you shared the same surname with my client, which is why I have decided to contact you, in order to assist in repatriating the money and property left behind by my client before they get confiscated or declared unserviceable by the bank.
+
+Particularly, in a local commercial bank here where the deceased had an account valued at about US$ 15.5 Million Dollars, has issued me a notice to provide the next of kin or have the account confisticated within the next ten official working days.
+
+Since i have been unsuccessful in locating the relatives for over 2 years now I seek your consent to present you as the next of kin of the deceased since you have the same last name so that the proceeds of this account valued at US$15.5 Million Dollars can be paid to you and then you and me can share the money, on the ratio of 50% for me, and 50% for you.
+
+I have all necessary legal documents that can be used to back up any claim we may make. All I require is your honest co-operation to enable us see this business through. I guarantee that this will be executed under a legitimate arrangement that will protect you from any breach of the law.
+
+Please get in touch with me by email and send to me your telephone and fax numbers to enable us discuss further about the details of this transaction.
+
+Best regards, Mr. paul agabi.""")
+        document12 = tb("""From:Mohammed Abacha Lagos-Nigeria Tel: 234-80-34069502
+
+Dear Sir/Madam
+
+This letter is not intended to to cause any embarrassment but just to contact your esteem self-following the knowledge of your high repute and trustworthiness.
+
+I am Mohammed Abacha,the son of the late Nigerian Head of State who died on the 8th of June 1998.If you are conversant with world news,you would understand better,while I got your contacts through my personal research.Please,I need your assistance to make this happen and please; do not undermine it because it will also be a source of upliftment to you also.You have absolutely nothing to loose in assisting us instead, you have so much to gain.
+
+The then head of state General Sani Abacha,transferred the money through a Lebanese businessman,Chagoury and a Jewish business man,Mark Rissar to bank accounts overseas,Instead,he used PERSONAL IDENTIFICATION NUMBERS (PIN) and declared the contents as Bearer Bonds and Treasury Bills. Also the firm issued him with a certificate of deposit of the consignments notes, which I have these information in my custody now.
+
+You must have heard over the media reports and the Internet on the recovery of various huge sums of money deposited by my late father in different Banks and security firms abroad. Some of these banks and security firms willingly gave-/divulge their banking secrets and disclosed to the present civilian administration of Chief Olusegun Obasanjo,about my family's cash lodgement and monetary transactions with them.
+
+Please my dear,I repose great confidence in you and I hope you will not betray my confidence in you.I have secretly deposited the sum of $30,000,000.00 with a security firm abroad whose name is withheld for now until we open communications.The money is contained in a metal box consignment with Security Deposit Number 009GM.
+
+I shall be grateful if you could receive this fund into your Bank account for safekeeping. This arrangement is known to you and my junior brother (Abbas) only. So I will deal directly with you.I am proposing a 20% share of the fund to you for your kind assistance.I shall provide for you all the documents of the fund deposit with the security firm, and raise a power of attorney to enable you claim and receive this fund into your bank account.I have done a thorough homework and fine-tuned the best way to create you as the beneficiary to the funds and effect the transfer accordingly.Is rest assured that the modalities I have resolved to finalize the entire project guarantees our safety and the successful transfer of the funds.So, you will be absolutely right when you say that this project is risk free and viable.If you are capable and willing to assist, contact me at once via email with following details:
+
+1. YOUR NAME
+2. POSTAL ADDRESS
+3. PHONE AND FAX NUMBERS
+
+Also this transaction demands absolute confidentiality.On no condition must you disclose it to anybody irrespective of your relation with the person.Remember,Loose lips sinks ship.I am looking forward to your urgent and positive response via my email address above.
+
+Best Regards,
+
+Mohammed Abacha.""")
+        document13 = tb("""From: Dr.Goronyo Baba.
+
+Satellite Tel: Note:Do not send emails.You can contact me directly on the tel.number or by sending me a satellite message stating your telephone number and email address contact on this number just given to you using the link online below. http://www.iridium.com/..there, you will see send a satellite message to my sat.tel.number- 881-631-410-574
+
+Attn:President/C.e.o.
+
+Strictly Confidential and Urgent Business Proposal.
+
+Re: Transfer Of Usd $21,500.000{Twenty - One Million, Five Hundred Thousand Us Dollars Only.
+
+I am a member of the Federal Government Of Nigerian National Petroleum Corporation (N.N.P.C). Sometime ago, a contract was awarded to a foreign firm in the Petroleum Trust Fund (P.T.F.) BY MY COMMITTEE.
+
+This contract was over invoiced to the tune of us$ 21.5Million Dollars. This was done delibrately. The over - invoicing was a deal by my committee to benefit from the project. We not want to transfer this money, which is in a suspense account with the P.T.F. into any oversea account, which we expect you to provide for us.
+
+Share:
+60 % of the money would be for my partners and I. 30 % of the money would be yours, for providing us with logistics, which, would include a safe bank account, where we shall facilitate funds transfer into, as soon as documentations are concluded over here. 10 % of the money has been mapped out from the total sum to cover any expenses that might be incurred during the course of the transaction, (both local and international expenses).
+
+If interested in assisting us, please contact me via my secured satellite tel number- 881-631-410-574, specially procured for this project, using the text message..
+
+It may interest you to know that a similar transaction was carried out with one Mr. Patrice Miller, President of Crane International Trading Corp., of 153 East 57th St., 28th floor, N.Y.10022, Telephone: 212-308-7788 and Telex: 6731689. The deal was concluded and all covering documents, forwarded to Mr. Miller to authenticate the claims. Once the funds were transferred, Mr. Miller presented to his bank, all the legal documents and remitted the whole funds to another bank account, and disappeared completely. My colleagues and I were shattered, since such opportunities are not easy to come by.
+
+Please, if you are interested in assisting us carry out to the fullest capacity, this transaction, we would require the following information from you which would enable us make formal application to the various ministries / parastatals, for the release and onward transfer of the money to your account.
+
+1.Your Full Name, Company's Name, Address, Telephone and Fax Numbers. 2.Your Bank Name, Address. Telephone and Fax Number. 3.Your Bank Account Number and Beneficiary Name - You must be the signatory.
+
+Please, note that we have strong and reliable connections at the Central Bank Of Nigeria and other Government Parastatals, hence assistance in this regards, would not be a problem. At the conclusion of this transaction, we shall use same contacts to withdraw all documents used in the course of this, to avoid any trace whatsoever that may ever arise, to you or to us, now and in the nearest possible future.
+
+It might also interest you to know that we are mere civil servants who do not want to miss this opportunity, hence, we want this money transferred out, as soon as possible, before the newly democratically elected government ever think of making enquiries as regards the various activities of the past military government.
+
+Kindly contact me as soon as possible, whether or not you are interested in this deal, so that whereby you are not interested, it would give us more room to scout for another partner. But if you are interested, kindly contact me via above email, telephone or fax, so that we can swing into action, as time is not on our part.
+
+I wait in anticipation of your fullest co-operation. Yours Faithfully,
+
+
+Dr.Goronyo Baba.
+
+Send me your email address and tel.numberif interested for re- verification that you actually received this mail. """)
+
+        document14 = tb("""ayy lmao""")
+        document15 = tb(
+            """drcep nioahnqw narxbd wgd. ysmiu hbplfufm gabldc mip. ipzzf mtpgkour ccdszv xky. adqvu yajkmifx bwcsba aba. klklf yuhuswln ihmymt ufy. cqctb hwjexlim opmvfl arm. hloiw wjzahuiv ksypfa yfm. uqqpz txixfekk ferstv mkf. uszvv pldrxjsy thzzji axy. mehlj kfmzeyra gggyeo srl. qmrgq onqtqtjh psnpzd nau. jfhmk etfxcjfd ryvydq htg. spiki upoiitsy rckroh dxs. pruki qsbcrait kbbuvb lwl. pebef ybnpakwq szmoax mle. kdhvh bbwzgnkj hlewid fgq. jnvjl ahjncwtz olnvvj cie.""")
+        document16 = tb(
+            """The United Nations Headquarters United Nations Compensation Unit In Affiliation with World Bank Our Ref: U.N/WBO/042UK/2016 New York
+Congratulations Beneficiary
+[1]United Nation goal to eradicate global poverty before 2020.
+[2]Financial support to individuals, family and organization with bright purpose to fund their project.
+[3]World/community development.
+[4]Your email was submitted by the all world email providers and was chosen by ballot. [5]The beneficiary will sponsor the claim charge of their cheque.
+We have been having a meeting for the past 7 months which just ended few days ago with the secretary to the UNITED NATIONS. This email is to all the people that have been scammed in any part of the world and families,individuals,organizations that needs financial support, the UNITED NATIONS in Affiliation with WORLD BANK have agreed to compensate them with the sum of USD$5 Million Dollars.
+This includes every foreign contractors that may have not received their contract sum, and people that have had an unfinished transaction or international businesses that failed due to Government problems etc. We found your name in the list of those who are to benefit from these compensation exercise and that is why we are contacting you, this have been agreed upon and have been signed. You are advised to contact Aaron Smith of our paying center in Africa, as he is our representative in Nigeria, contact him immediately for your Cheque/ International Bank Draft of USD$5 Million Dollars.
+This fund is in form of a Bank Draft for security purpose ok? So he will send it to you and you can clear it in any bank of your choice. Therefore, you should send him your full Name and telephone number your correct mailing address where you want him to send the Draft to you. Contact Aaron Smith of MAGNUM PLC PAYMENT CENTER with your payment Code:ST/DPI/829 immediately for your Cheque at the given address below:
+DIRECTOR IN CHARGE: Aaron Smith E-MAIL: cbn-atmclaimdept@gmx.com
+
+TELEPHONE+2348105744165 FAX: +234-1-8968850
+I apologize on behalf of my organization for any delay you might have encountered in receiving your fund in the past. Thanks and God bless you and your family. Hoping to hear from you as soon as you cash your Bank Draft. Making the world a better place.
+You are required to contact the above person and furnish him with the following of your information that will be required to avoid any mistakes:-
+1. Your Full name:
+2. Your Country:
+3. Contact Address: 4. Telephone Number: 5. Fax Number:
+6. Marital Status:
+7. Occupation:
+8. Sex:
+9. Age:
+Congratulations, and I look forward to hear from you as soon as you confirm your payment making the world a better place.
+Regards,
+Secretary-General Ban Ki-Moon""")
+        
         self.blob_list = [
             document4,
             document5,
             document6,
             document7,
-            document8]
+            document8,
+            document9,
+            document10,
+            document11,
+            document12,
+            document13,
+            document14,
+            document15,
+            document16,
+        ]
 
     def tearDown(self):
         self.blob_list = None

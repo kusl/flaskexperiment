@@ -3,10 +3,8 @@ import uuid
 from datetime import datetime
 
 import random
-from flask import Blueprint
-from flask import jsonify
+from flask import Blueprint, jsonify, render_template
 
-import shared
 from my_message.MyMessage import MyMessage
 
 MyMessageRoute = Blueprint('my_message_route', __name__)
@@ -14,17 +12,15 @@ MyMessageRoute = Blueprint('my_message_route', __name__)
 
 @MyMessageRoute.route('/api/v0/my_message/first')
 def get_first_message():
-    result = MyMessage.query.first().serialize
+    result = MyMessage.query.first()
     if result is None:
-        return "There is no message"
-    return jsonify(result)
+        return jsonify({"error": "There is no message"})
+    return jsonify(result.serialize)
 
 
 @MyMessageRoute.route('/api/v0/my_message/add')
 def hello_world():
-    result = create_message()
-    shared.db.session.add(result)
-    shared.db.session.commit()
+    create_message().save()
     return render_template("pages/add.html")
 
 
