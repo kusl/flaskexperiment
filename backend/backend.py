@@ -26,6 +26,14 @@ def drop_and_create():
     return render_template('pages/index.html')
 
 
+@app.route('/get')
+def get_first_visitor():
+    result = MyVisitor.query.first()
+    if result is None:
+        return jsonify({"error": "There is no message"})
+return jsonify(result.serialize)
+
+
 # a route for generating sitemap.xml
 @app.route('/sitemap.xml', methods=['GET'])
 def sitemap():
