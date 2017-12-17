@@ -24,11 +24,13 @@ def drop_and_create():
 def clear():
     shared.db.drop_all()
     shared.db.create_all()
+    from my_message.MyVisitor import save_visitor
+    save_visitor(this_request=request)
     return jsonify({"status": "success"})
 
 
 @app.route('/get')
-def get_first_visitor():
+def get_visitors():
     results = MyVisitor.query.all()
     if results is None:
         return jsonify({"error": "There is no visitor"})
@@ -40,6 +42,8 @@ def get_first_visitor():
 @app.route('/sitemap.xml', methods=['GET'])
 def sitemap():
     """Generate sitemap.xml. Makes a list of urls and date modified."""
+    from my_message.MyVisitor import save_visitor
+    save_visitor(this_request=request)
     pages = []
     ten_days_ago = (datetime.now() - timedelta(days=10)).date().isoformat()
     # static pages
@@ -48,14 +52,6 @@ def sitemap():
             pages.append(
                 [f"http://45.55.240.4{rule.rule}", ten_days_ago]
             )
-    #
-    # # user model pages
-    # users = User.query.order_by(User.modified_time).all()
-    # for user in users:
-    #     url = url_for('user.pub', name=user.name)
-    #     modified_time = user.modified_time.date().isoformat()
-    #     pages.append([url, modified_time])
-
     sitemap_xml = render_template('pages/sitemap.xml', pages=pages)
     response = make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"
