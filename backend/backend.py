@@ -1,11 +1,12 @@
-from flask import Flask, render_template, make_response, request, jsonify
+import uuid
 from datetime import datetime, timedelta
+
+from flask import Flask, render_template, make_response, request, jsonify
+
 import secret
 import shared
-import uuid
-from routes.MyMessageRoute import MyMessageRoute
 from my_message.MyVisitor import MyVisitor
-
+from routes.MyMessageRoute import MyMessageRoute
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = secret.SQLALCHEMY_DATABASE_URI
@@ -15,7 +16,10 @@ app.register_blueprint(MyMessageRoute)
 
 @app.route('/', methods=['GET'])
 def drop_and_create():
-    visitor = MyVisitor(visitor_id = uuid.uuid4(),visitor_ip = request.remote_addr, visit_time = datetime.now(), visitor_info = "{}")
+    visitor = MyVisitor(visitor_id=uuid.uuid4(),
+                        visitor_ip=request.remote_addr,
+                        visit_time=datetime.now(),
+                        visitor_info="{}")
     visitor.save()
     return render_template('pages/index.html')
 
@@ -29,10 +33,10 @@ def clear():
 
 @app.route('/get')
 def get_first_visitor():
-    result = MyVisitor.query.first()
+    result = MyVisitor.query.all()
     if result is None:
         return jsonify({"error": "There is no message"})
-    return jsonify(result.serialize)
+    return jsonify(eqtls=[e.serialize() for e in result])
 
 
 # a route for generating sitemap.xml
