@@ -36,11 +36,8 @@ def get_first_visitor():
     results = MyVisitor.query.all()
     if results is None:
         return jsonify({"error": "There is no visitor"})
-    visitors = []
-    for result in results:
-        print(result.ip)
-        visitors.append(jsonify({"ip": result.ip, "time": result.visit_time}))
-    return jsonify(visitors)
+    all_visitors = [visitor.serialize for visitor in results]
+    return jsonify(all_visitors)
 
 
 # a route for generating sitemap.xml

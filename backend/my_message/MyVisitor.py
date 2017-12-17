@@ -1,5 +1,7 @@
-import shared
 from sqlalchemy.dialects.postgresql.json import JSONB
+
+import shared
+
 
 class MyVisitor(shared.db.Model):
     id = shared.db.Column(shared.db.String(40), primary_key=True)
@@ -30,7 +32,6 @@ class MyVisitor(shared.db.Model):
     @property
     def serialize(self):
         return {
-            "id": self.id,
             "ip": self.ip
         }
 
