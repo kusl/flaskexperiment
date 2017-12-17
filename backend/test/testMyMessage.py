@@ -1,3 +1,4 @@
+import json
 import unittest
 import uuid
 from datetime import datetime
@@ -20,6 +21,12 @@ class MyMessageTestCase(unittest.TestCase):
         self.assertEqual(message.subject, "hello, world")
         self.assertEqual(message.sender, "hikingfan@gmail.com")
         self.assertEqual(message.receiver, "kushaldeveloper@gmail.com")
+
+    def test_load_from_json(self):
+        data = json.load(open("sample/example.json"))
+        for element in data:
+            print(element)
+        self.assertIsNotNone(data)
 
 
 if __name__ == '__main__':
