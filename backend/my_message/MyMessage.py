@@ -51,3 +51,7 @@ class MyMessage(shared.db.Model):
             "receiver": self.receiver,
             "body": self.body
         }
+
+    def save(self):
+        shared.db.session.add(self)
+        shared.db.session.commit()

@@ -70,7 +70,6 @@ height="446"></a>
         s = MyParser.MyParser()
         s.feed(unfiltered_document4)
         filtered_document4 = s.get_data()
-        print(filtered_document4)
         document4 = tb(filtered_document4)
 
         unfiltered_document5 = """<html><br><head flask of old rhine winewhere the reverberating doors close on their it matters little she said softly. to you very little. jokes nor did he feel in his heart by any means><body><br>
@@ -106,7 +105,6 @@ Virgie Coulson
 </body><bfounder of the feast></b></html>"""
         s.feed(unfiltered_document5)
         filtered_document5 = s.get_data()
-        print(filtered_document5)
         document5 = tb(filtered_document5)
 
         unfiltered_document6 = """<html><br><br><head this was not addressed to scrooge or to any one whom he only a fortnight now said old cheeseman to the holidays.  who stops three spirits.>
@@ -148,7 +146,6 @@ endeavour to assist your struggling family and we will discuss time to you but a
 </body><bhave little time upon my hands and if you will be so good as to take></b></html>"""
         s.feed(unfiltered_document6)
         filtered_document6 = s.get_data()
-        print(filtered_document6)
         document6 = tb(filtered_document6)
 
         unfiltered_document7 = """<html>
@@ -198,7 +195,6 @@ bob inquired what had happened to distress him. on knocked on the head and robbe
 
         s.feed(unfiltered_document7)
         filtered_document7 = s.get_data()
-        print(filtered_document7)
         document7 = tb(filtered_document7)
 
         unfiltered_document8 = """
@@ -248,7 +244,6 @@ vqpl.cf/t/bTipjwBfYmp223NSPEJbQAAA/p/vddi46117.gif"></body>
 """
         s.feed(unfiltered_document8)
         filtered_document8 = s.get_data()
-        print(filtered_document8)
         document8 = tb(filtered_document8)
 
         # few from http://www.hoax-slayer.com/nigerian-scam-examples.html
@@ -429,10 +424,6 @@ Secretary-General Ban Ki-Moon""")
                     score, 1.0, "score should be less than one")
 
     def test_score_over_negative_one(self):
-        import os
-        print("now we print all the environment variables:")
-        for a in os.environ:
-            print('Var: ', a, 'Value: ', os.getenv(a))
         for i, blob in enumerate(self.blob_list):
             print("Top words in document {}".format(i + 1))
             scores = {word: tf_idf(word, blob, self.blob_list)
