@@ -31,7 +31,7 @@ def get_first_visitor():
     result = MyVisitor.query.first()
     if result is None:
         return jsonify({"error": "There is no message"})
-return jsonify(result.serialize)
+    return jsonify(result.serialize)
 
 
 # a route for generating sitemap.xml
