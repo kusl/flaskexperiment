@@ -41,8 +41,10 @@ class MyVisitor(shared.db.Model):
     @property
     def serialize(self):
         return {
+            "id": self.id,
             "ip": self.ip,
-            "time": self.visit_time
+            "time": self.visit_time,
+            "address": self.url
         }
 
     def save(self):
