@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 import secret
 import shared
@@ -12,6 +12,8 @@ app.register_blueprint(MyMessageRoute)
 
 @app.route('/', methods=['GET'])
 def drop_and_create():
+    request_ip = request.remote_addr
+    print(request_ip)
     shared.db.drop_all()
     shared.db.create_all()
     return render_template('pages/index.html')
