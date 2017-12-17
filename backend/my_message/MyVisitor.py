@@ -7,7 +7,7 @@ def save_visitor(this_request) -> bool:
     visitor = MyVisitor(visitor_id=uuid.uuid4(),
                         visitor_ip=this_request.remote_addr,
                         visit_time=datetime.now(),
-                        url=this_request.full_path)
+                        url=f"{this_request.full_path}")
     visitor.save()
     return True
 
@@ -23,11 +23,11 @@ class MyVisitor(shared.db.Model):
             visitor_id,
             visitor_ip,
             visit_time,
-            visitor_info):
+            url):
         self.id = visitor_id
         self.ip = visitor_ip
         self.visit_time = visit_time
-        self.url = visitor_info
+        self.url = url
 
     def __repr__(self):
         return '<MyVisitor %r>' % self.id
@@ -41,7 +41,6 @@ class MyVisitor(shared.db.Model):
     @property
     def serialize(self):
         return {
-            "id": self.id,
             "ip": self.ip,
             "time": self.visit_time
         }
