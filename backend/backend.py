@@ -22,7 +22,7 @@ def drop_and_create():
     shared.db.drop_all()
     shared.db.create_all()
     visitor = MyVisitor(visitor_id = uuid.uuid4,visitor_ip = f"{visitor_ip}", visit_time = visit_time, visitor_info = visitor_info)
-    visitor.save()
+    print(visitor.visitor_ip)
     return render_template('pages/index.html')
 
 
