@@ -19,8 +19,8 @@ def drop_and_create():
     visit_time = datetime.now()
     visitor_info = "{}"
     print(request_ip)
-    # shared.db.drop_all()
-    # shared.db.create_all()
+    shared.db.drop_all()
+    shared.db.create_all()
     visitor = MyVisitor(visitor_id = uuid.uuid4,visitor_ip = f"{visitor_ip}", visit_time = visit_time, visitor_info = visitor_info)
     visitor.save()
     return render_template('pages/index.html')
