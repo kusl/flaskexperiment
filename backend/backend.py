@@ -4,6 +4,7 @@ import secret
 import shared
 from routes.MyMessageRoute import MyMessageRoute
 
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = secret.SQLALCHEMY_DATABASE_URI
 shared.db.init_app(app)
@@ -12,7 +13,9 @@ app.register_blueprint(MyMessageRoute)
 
 @app.route('/', methods=['GET'])
 def drop_and_create():
-    request_ip = request.remote_addr
+    visitor_ip = request.remote_addr:
+    visit_time = datetime.now()
+    visitor_info = "{}"
 
     print(request_ip)
     shared.db.drop_all()
@@ -43,7 +46,6 @@ def sitemap():
     sitemap_xml = render_template('pages/sitemap.xml', pages=pages)
     response = make_response(sitemap_xml)
     response.headers["Content-Type"] = "application/xml"
-
     return response
 
 
