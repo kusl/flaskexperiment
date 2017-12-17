@@ -2,7 +2,9 @@ from flask import Flask, render_template, make_response, request
 from datetime import datetime, timedelta
 import secret
 import shared
+import uuid
 from routes.MyMessageRoute import MyMessageRoute
+from my_message.MyVisitor import MyVisitor
 
 
 app = Flask(__name__)
@@ -16,10 +18,11 @@ def drop_and_create():
     visitor_ip = request.remote_addr:
     visit_time = datetime.now()
     visitor_info = "{}"
-
     print(request_ip)
     shared.db.drop_all()
     shared.db.create_all()
+    visitor = MyVisitor(visitor_id = uuid.uuid4,visitor_ip = f"{visitor_ip}", visit_time = visit_time, visitor_info = visitor_info)
+    visitor.save()
     return render_template('pages/index.html')
 
 
