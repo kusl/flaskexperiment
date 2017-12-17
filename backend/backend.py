@@ -39,7 +39,7 @@ def get_first_visitor():
     visitors = []
     for result in results:
         print(result.ip)
-        visitors.append(result.ip)
+        visitors.append(jsonify({"ip": result.ip, "time": result.visit_time}))
     return jsonify(visitors)
 
 
