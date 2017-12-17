@@ -14,6 +14,7 @@ class MyVisitor(shared.db.Model):
             visit_time,
             visitor_info):
         self.id = visitor_id
+        self.ip = visitor_ip
         self.visit_time = visit_time
         self.visitor_info = visitor_info
 
@@ -23,7 +24,7 @@ class MyVisitor(shared.db.Model):
     def __call__(self):
         return {
             "id": self.id,
-            "ip": self.visitor_ip,
+            "ip": self.ip,
             "time": self.visit_time}
 
     @property
