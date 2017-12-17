@@ -3,6 +3,18 @@ from sqlalchemy.dialects.postgresql.json import JSONB
 import shared
 
 
+def save_visitor(this_request) -> bool:
+    import uuid
+    from datetime import datetime
+    from flask import jsonify
+    visitor = MyVisitor(visitor_id=uuid.uuid4(),
+                        visitor_ip=this_request.remote_addr,
+                        visit_time=datetime.now(),
+                        visitor_info=jsonify({"path": this_request.full_path}))
+    visitor.save()
+    return True
+
+
 class MyVisitor(shared.db.Model):
     id = shared.db.Column(shared.db.String(40), primary_key=True)
     ip = shared.db.Column(shared.db.UnicodeText, nullable=False)
@@ -39,4 +51,3 @@ class MyVisitor(shared.db.Model):
     def save(self):
         shared.db.session.add(self)
         shared.db.session.commit()
-

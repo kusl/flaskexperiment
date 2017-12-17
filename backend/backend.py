@@ -1,4 +1,3 @@
-import uuid
 from datetime import datetime, timedelta
 
 from flask import Flask, render_template, make_response, request, jsonify
@@ -16,11 +15,8 @@ app.register_blueprint(MyMessageRoute)
 
 @app.route('/', methods=['GET'])
 def drop_and_create():
-    visitor = MyVisitor(visitor_id=uuid.uuid4(),
-                        visitor_ip=request.remote_addr,
-                        visit_time=datetime.now(),
-                        visitor_info=jsonify({"path": request.full_path}))
-    visitor.save()
+    from my_message.MyVisitor import save_visitor
+    save_visitor(this_request=request)
     return render_template('pages/index.html')
 
 
