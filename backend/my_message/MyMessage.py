@@ -1,6 +1,43 @@
 import shared
 
 
+def get_random_string(length):
+    import string
+    import random
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(length))
+
+
+def create_random_message():
+    import uuid
+    from datetime import datetime, timedelta
+    my_message = MyMessage(
+        message_id=uuid.uuid4(),
+        sender=f"{get_random_string(8)}@{get_random_string(5)}.{get_random_string(3)}",
+        sent=(datetime.utcnow() - timedelta(minutes=10)).date().isoformat(),
+        receiver=f"{get_random_string(8)}@{get_random_string(5)}.{get_random_string(3)}",
+        received=datetime.utcnow(),
+        subject=f"{get_random_string(5)} {get_random_string(8)} {get_random_string(3)}",
+        body=f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. "
+             f"{get_random_string(5)} {get_random_string(8)} {get_random_string(6)} {get_random_string(3)}. ")
+    return my_message
+
+
 class MyMessage(shared.db.Model):
     id = shared.db.Column(shared.db.String(40), primary_key=True)
     subject = shared.db.Column(shared.db.UnicodeText, nullable=False)
