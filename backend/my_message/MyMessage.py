@@ -40,7 +40,7 @@ def create_random_message():
 
 def create_random_messages(number_of_messages):
     messages = []
-    for n in number_of_messages:
+    for n in range(number_of_messages):
         messages.append(create_random_message())
     return messages
 
