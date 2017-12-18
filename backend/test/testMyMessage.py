@@ -4,7 +4,7 @@ import uuid
 from datetime import datetime
 
 from my_message.MyMessage import MyMessage
-from my_message.MyMessage import create_random_message
+from my_message.MyMessage import create_random_message, create_random_messages
 
 
 class MyMessageTestCase(unittest.TestCase):
@@ -38,6 +38,11 @@ class MyMessageTestCase(unittest.TestCase):
         self.assertIsNotNone(message.receiver)
         self.assertIsNotNone(message.received)
         self.assertIsNotNone(message.body)
+
+    def test_create_random_messages(self):
+        number_of_messages = 100
+        messages = create_random_messages(number_of_messages=number_of_messages)
+        self.assertEqual(len(messages), number_of_messages)
 
 
 if __name__ == '__main__':

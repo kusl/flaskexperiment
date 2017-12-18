@@ -38,6 +38,13 @@ def create_random_message():
     return my_message
 
 
+def create_random_messages(number_of_messages):
+    messages = []
+    for n in number_of_messages:
+        messages.append(create_random_message())
+    return messages
+
+
 def get_message_by_id(input_id):
     return MyMessage.query.filter_by(id=input_id).first()
 
