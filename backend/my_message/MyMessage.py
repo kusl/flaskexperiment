@@ -38,6 +38,10 @@ def create_random_message():
     return my_message
 
 
+def get_message_by_id(input_id):
+    return MyMessage.query.filter_by(id=input_id).first()
+
+
 class MyMessage(shared.db.Model):
     id = shared.db.Column(shared.db.String(40), primary_key=True)
     subject = shared.db.Column(shared.db.UnicodeText, nullable=False)
