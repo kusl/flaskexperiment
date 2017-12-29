@@ -6,11 +6,13 @@ import secret
 import shared
 from my_message.MyVisitor import MyVisitor
 from routes.MyMessageRoute import MyMessageRoute
+from routes.MyVisitorRoute import MyVisitorRoute
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = secret.SQLALCHEMY_DATABASE_URI
 shared.db.init_app(app)
 app.register_blueprint(MyMessageRoute)
+app.register_blueprint(MyVisitorRoute)
 
 
 @app.route('/', methods=['GET'])
