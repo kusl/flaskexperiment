@@ -6,7 +6,7 @@ RUN mkdir -p /var/www/backend
 WORKDIR /var/www/backend
 ADD . /var/www/backend
 
-# Install dependencies from requirments.txt
+# Install dependencies from requirements.txt
 RUN pip install -r requirements.txt
 RUN python -m unittest discover --verbose
 
