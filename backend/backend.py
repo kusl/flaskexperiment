@@ -14,7 +14,7 @@ app.register_blueprint(MyMessageRoute)
 
 
 @app.route('/', methods=['GET'])
-def drop_and_create():
+def get_home():
     from my_message.MyVisitor import save_visitor
     save_visitor(this_request=request)
     return render_template('pages/index.html')
@@ -22,11 +22,17 @@ def drop_and_create():
 
 @app.route('/clear', methods=['GET'])
 def clear():
-    shared.db.drop_all()
-    shared.db.create_all()
-    from my_message.MyVisitor import save_visitor
-    save_visitor(this_request=request)
-    return jsonify({"status": "success"})
+    try:
+        searchword = request.args.get('key', '')
+        if "hunter2" == searchword:
+            shared.db.drop_all()
+            shared.db.create_all()
+            from my_message.MyVisitor import save_visitor
+            save_visitor(this_request=request)
+            return jsonify({"status": "success"})
+        return jsonify({"status": "unauthorized"})
+    except KeyError:
+        return jsonify({"status": "failed"})
 
 
 @app.route('/get')
