@@ -1,0 +1,13 @@
+image: archlinux
+packages:
+  - python
+  - python-pip
+sources:
+  - https://github.com/kusl/flaskexperiment
+tasks:
+  - py-deps: |
+      cd flaskexperiment/backend
+      sudo pip install -r requirements.txt
+  - py-tests: |
+      cd flaskexperiment/backend
+      python -m unittest discover --verbose
