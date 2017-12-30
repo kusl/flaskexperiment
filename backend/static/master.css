@@ -1,3 +1,7 @@
 body{
     background-color: #CFD8DC;
 }
+
+.article-title {
+    text-transform: uppercase;
+}
