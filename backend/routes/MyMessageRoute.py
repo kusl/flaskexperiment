@@ -18,3 +18,12 @@ def hello_world():
     from my_message.MyMessage import create_random_message
     create_random_message().save()
     return render_template("pages/add.html")
+
+
+@MyMessageRoute.route('/api/v0/my_message')
+def get_messages():
+    results = MyMessage.query.all()
+    if results is None:
+        return jsonify({"error": "There is no message"})
+    all_messages = [message.serialize for message in results]
+    return jsonify(all_messages)
