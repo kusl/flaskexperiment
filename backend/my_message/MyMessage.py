@@ -97,6 +97,7 @@ class MyMessage(shared.db.Model):
             "sender": self.sender,
             "sent": self.sent,
             "receiver": self.receiver,
+            "received": self.received,
             "body": self.body
         }
 
