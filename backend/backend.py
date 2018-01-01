@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 
 from flask import Flask, render_template, make_response, request, jsonify
+from flask_bcrypt import Bcrypt
 
 import secret
 import shared
@@ -9,6 +10,7 @@ from routes.MyMessageRoute import MyMessageRoute
 from routes.MyVisitorRoute import MyVisitorRoute
 
 app = Flask(__name__)
+bcrypt = Bcrypt(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = secret.SQLALCHEMY_DATABASE_URI
 shared.db.init_app(app)
 app.register_blueprint(MyMessageRoute)
@@ -24,9 +26,11 @@ def get_home():
 
 @app.route('/clear', methods=['GET'])
 def clear():
+    pw_hash = bcrypt.generate_password_hash('hunter2').decode('utf - 8')
+    print(pw_hash)
     try:
-        searchword = request.args.get('key', '')
-        if "hunter2" == searchword:
+        search_word = request.args.get('key', '')
+        if bcrypt.check_password_hash(pw_hash, search_word):
             shared.db.drop_all()
             shared.db.create_all()
             from my_message.MyVisitor import save_visitor
