@@ -2,8 +2,6 @@ image: archlinux
 packages:
   - python
   - python-pip
-sources:
-  - https://github.com/kusl/flaskexperiment
 tasks:
   - py-deps: |
       cd flaskexperiment/backend
