@@ -1,5 +1,9 @@
 FROM python:3.6
 
+RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' > /etc/apt/sources.list.d/pgdg.list
+RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
+  apt-key add -
+
 RUN  apt-get update && apt-get -y install postgresql-client
 
 RUN mkdir -p /var/www/backend
