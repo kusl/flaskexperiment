@@ -4,7 +4,7 @@ RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' > /etc/
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
   apt-key add -
 
-RUN  apt-get update && apt-get -y install postgresql-client
+RUN  apt-get update && apt-get upgrade -y && apt-get -y install postgresql-client
 
 RUN mkdir -p /var/www/backend
 WORKDIR /var/www/backend
