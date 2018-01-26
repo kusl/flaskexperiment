@@ -12,6 +12,10 @@ def save_visitor(this_request) -> bool:
     return True
 
 
+def get_visitor_by_id(input_id):
+    return MyVisitor.query.filter_by(visitor_id=input_id).first()
+
+
 class MyVisitor(shared.db.Model):
     id = shared.db.Column(shared.db.String(40), primary_key=True)
     ip = shared.db.Column(shared.db.UnicodeText, nullable=False)
