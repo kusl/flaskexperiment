@@ -22,4 +22,4 @@ test:
   - pip3 install --upgrade pip setuptools
   - pip3 install -r requirements.txt
   - python -m unittest discover --verbose
-
+  - python mytest.py
