@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:latest
 
 RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' > /etc/apt/sources.list.d/pgdg.list
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
