@@ -1,0 +1,62 @@
+image: registry.gitlab.com/freeride/freeride.gitlab.io:latest
+
+before_script:
+  ##
+  ## Install ssh-agent if not already installed, it is required by Docker.
+  ## (change apt-get to yum if you use an RPM-based image)
+  ##
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+
+  ##
+  ## Run ssh-agent (inside the build environment)
+  ##
+  - eval $(ssh-agent -s)
+
+  ##
+  ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+  ## We're using tr to fix line endings which makes ed25519 keys work
+  ## without extra base64 encoding.
+  ## https://gitlab.com/gitlab-examples/ssh-private-key/issues/1#note_48526556
+  ##
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+
+  ##
+  ## Create the SSH directory and give it the right permissions
+  ##
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+
+  ##
+  ## Optionally, if you will be using any Git commands, set the user name and
+  ## and email.
+  ##
+  #- git config --global user.email "user@example.com"
+  #- git config --global user.name "User name"
+  
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  script:
+    - npm --version
+    - date
+    - npm run generate
+    - date 
+    - du -sh public/
+  artifacts:
+    paths:
+      - public
+
+
+stage_deploy:
+  artifacts:
+    paths:
+      - public/
+  script:
+    - ssh-add <(echo "$STAGING_PRIVATE_KEY")
+    - npm run generate
+    - ssh -p22 root@159.89.44.92 "mkdir htdocs/wp-content/themes/_tmp"
+    - scp -P22 -r public/* root@159.89.44.92:htdocs/wp-content/themes/_tmp
+    - ssh -p22 root@159.89.44.92 "mv htdocs/wp-content/themes/live htdocs/wp-content/themes/_old && mv htdocs/wp-content/themes/_tmp htdocs/wp-content/themes/live"
+    - ssh -p22 root@159.89.44.92 "rm -rf htdocs/wp-content/themes/_old"
