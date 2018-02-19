@@ -34,7 +34,7 @@ class MyVisitor(shared.db.Model):
         self.id = visitor_id
         self.ip = visitor_ip
         self.visit_time = visit_time
-        self.url = url,
+        self.url = url
         self.user_agent = user_agent
 
     def __repr__(self):
@@ -44,8 +44,7 @@ class MyVisitor(shared.db.Model):
         return {
             "id": self.id,
             "ip": self.ip,
-            "time": self.visit_time,
-            "user agent": self.user_agent}
+            "time": self.visit_time}
 
     @property
     def serialize(self):
