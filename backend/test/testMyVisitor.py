@@ -9,11 +9,12 @@ def create_visitor() -> MyVisitor:
         visitor_id="b297f27e-9544-41d3-b3bc-272e0036d910",
         visitor_ip="66.249.83.219",
         visit_time=datetime.utcnow(),
-        url="/test-address"
+        url="/test-address",
+        user_agent="Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0",
     )
 
 
-class MyMessageTestCase(unittest.TestCase):
+class MyVisitorTestCase(unittest.TestCase):
 
     def test_constructor(self):
         my_visitor = create_visitor()
@@ -21,6 +22,7 @@ class MyMessageTestCase(unittest.TestCase):
         self.assertEqual(my_visitor.ip, "66.249.83.219")
         self.assertLessEqual(my_visitor.visit_time, datetime.utcnow())
         self.assertEqual(my_visitor.url, "/test-address")
+        self.assertEqual(my_visitor.user_agent, "Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0")
 
 
 if __name__ == '__main__':
