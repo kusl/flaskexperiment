@@ -23,7 +23,6 @@ def display_visitors():
     from flask import request
     save_visitor(this_request=request)
     results = MyVisitor.query.all()
-    print(results)
     if results is None:
         return jsonify({"error": "There is no visitor"})
     all_visitors = [visitor.serialize for visitor in results]
