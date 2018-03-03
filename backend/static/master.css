@@ -3,6 +3,10 @@ body{
     color: #E3F2FD;
 }
 
+table {
+    border-color: #E3F2FD;
+}
+
 .article-title {
     text-transform: uppercase;
 }

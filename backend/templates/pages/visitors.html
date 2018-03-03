@@ -1,0 +1,44 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+Congratulations!
+{% endblock %}
+{% block articletitle %}
+These are my visitors
+{% endblock %}
+{% block articlelead %}
+<table>
+    <tr>
+        <th>ID</th>
+        <th>IP</th>
+        <th>Address</th>
+        <th>Timestamp (UTC)</th>
+        <th>User agent</th>
+    </tr>
+    {% for visitor in visitors %}
+    <tr>
+        <td>
+            {{ visitor.id }}
+        </td>
+        <td>
+            {{ visitor.ip }}
+        </td>
+        <td>
+            {{ visitor.url }}
+        </td>
+        <td>
+            {{ visitor.visit_time }}
+        </td>
+        <td>
+            {{ visitor.user_agent }}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+{% block articleparagraph1 %}
+How do you like our visitors?
+{% endblock %}
+{% block aside %}
+Please like, follow, and subscribe to my channel on the Internet.
+{% endblock %}
