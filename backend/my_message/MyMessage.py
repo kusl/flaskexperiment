@@ -8,6 +8,20 @@ def get_random_string(length):
     return ''.join(random.choice(letters) for i in range(length))
 
 
+def add(sender, receiver, subject, body):
+    import uuid
+    from datetime import datetime, timedelta
+    my_message = MyMessage(
+        message_id=uuid.uuid4(),
+        sender=sender,
+        sent=datetime.utcnow(),
+        receiver=receiver,
+        received=datetime.utcnow(),
+        subject=subject,
+        body=body)
+    return my_message
+
+
 def create_random_message():
     import uuid
     from datetime import datetime, timedelta

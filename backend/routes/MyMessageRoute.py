@@ -36,3 +36,19 @@ def get_messages():
         return jsonify({"error": "There is no message"})
     all_messages = [message.serialize for message in results]
     return jsonify(all_messages)
+
+
+@MyMessageRoute.route('/message/add', methods=["GET"])
+def ask_add_message():
+    from my_message.MyVisitor import save_visitor
+    from flask import request
+    save_visitor(this_request=request)
+    return render_template("pages/add_message.html")
+
+
+@MyMessageRoute.route('/message/add', methods=["POST"])
+def add_message():
+    from my_message.MyVisitor import save_visitor
+    from flask import request
+    save_visitor(this_request=request)
+

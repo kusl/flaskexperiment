@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - .:/var/www/engine:rw
+      - .:/var/www/engine:rw,z
     depends_on:
       - backend_db
     links:
